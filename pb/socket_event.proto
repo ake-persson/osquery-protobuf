@@ -1,0 +1,57 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Track network socket opens and closes.
+message SocketEvent {
+
+  // The socket action (bind
+  string action = 1;
+
+  // Process (or thread) ID
+  int64 pid = 2;
+
+  // Path of executed file
+  string path = 3;
+
+  // The file description for the process socket
+  string fd = 4;
+
+  // Audit User ID
+  int64 auid = 5;
+
+  // The socket open attempt status
+  int32 success = 6;
+
+  // The Internet protocol family ID
+  int32 family = 7;
+
+  // Local address associated with socket
+  string local_address = 8;
+
+  // Remote address associated with socket
+  string remote_address = 9;
+
+  // Local network protocol port number
+  int32 local_port = 10;
+
+  // Remote network protocol port number
+  int32 remote_port = 11;
+
+  // The local path (UNIX domain socket only
+  string socket = 12;
+
+  // Time of execution in UNIX time
+  int64 time = 13;
+
+  // Time of execution in system uptime
+  int64 uptime = 14;
+
+  // Event ID
+  string eid = 15;
+}

@@ -1,0 +1,24 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Machine power (currents, voltages, wattages, etc) sensors.
+message PowerSensor {
+
+  // The SMC key on OS X
+  string key = 1;
+
+  // The sensor category: currents
+  string category = 2;
+
+  // Name of power source
+  string name = 3;
+
+  // Power in Watts
+  string value = 4;
+}

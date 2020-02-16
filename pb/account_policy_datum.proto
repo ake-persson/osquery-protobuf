@@ -1,0 +1,27 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Additional OS X user account data from the AccountPolicy section of OpenDirectory.
+message AccountPolicyDatum {
+
+  // User ID
+  int64 uid = 1;
+
+  // When the account was first created
+  double creation_time = 2;
+
+  // The number of times the user failed to login with the correct password. Resets after a correct password is entered
+  int64 failed_login_count = 3;
+
+  // The time of the last failed login attempt. Resets after a correct password is entered
+  double failed_login_timestamp = 4;
+
+  // The time the password was last changed
+  double password_last_set_time = 5;
+}

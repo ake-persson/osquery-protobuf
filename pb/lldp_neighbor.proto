@@ -1,0 +1,219 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// LLDP neighbors of interfaces.
+message LldpNeighbor {
+
+  // Interface name
+  string interface = 1;
+
+  // Neighbor chassis index
+  int32 rid = 2;
+
+  // Neighbor chassis ID type
+  string chassis_id_type = 3;
+
+  // Neighbor chassis ID value
+  string chassis_id = 4;
+
+  // CPU brand string
+  string chassis_sysname = 5;
+
+  // Max number of CPU physical cores
+  int32 chassis_sys_description = 6;
+
+  // Chassis bridge capability availability
+  int32 chassis_bridge_capability_available = 7;
+
+  // Is chassis bridge capability enabled.
+  int32 chassis_bridge_capability_enabled = 8;
+
+  // Chassis router capability availability
+  int32 chassis_router_capability_available = 9;
+
+  // Chassis router capability enabled
+  int32 chassis_router_capability_enabled = 10;
+
+  // Chassis repeater capability availability
+  int32 chassis_repeater_capability_available = 11;
+
+  // Chassis repeater capability enabled
+  int32 chassis_repeater_capability_enabled = 12;
+
+  // Chassis wlan capability availability
+  int32 chassis_wlan_capability_available = 13;
+
+  // Chassis wlan capability enabled
+  int32 chassis_wlan_capability_enabled = 14;
+
+  // Chassis telephone capability availability
+  int32 chassis_tel_capability_available = 15;
+
+  // Chassis telephone capability enabled
+  int32 chassis_tel_capability_enabled = 16;
+
+  // Chassis DOCSIS capability availability
+  int32 chassis_docsis_capability_available = 17;
+
+  // Chassis DOCSIS capability enabled
+  int32 chassis_docsis_capability_enabled = 18;
+
+  // Chassis station capability availability
+  int32 chassis_station_capability_available = 19;
+
+  // Chassis station capability enabled
+  int32 chassis_station_capability_enabled = 20;
+
+  // Chassis other capability availability
+  int32 chassis_other_capability_available = 21;
+
+  // Chassis other capability enabled
+  int32 chassis_other_capability_enabled = 22;
+
+  // Comma delimited list of chassis management IPS
+  string chassis_mgmt_ips = 23;
+
+  // Port ID type
+  string port_id_type = 24;
+
+  // Port ID value
+  string port_id = 25;
+
+  // Port description
+  string port_description = 26;
+
+  // Age of neighbor port
+  int64 port_ttl = 27;
+
+  // Port max frame size
+  int64 port_mfs = 28;
+
+  // Port aggregation ID
+  string port_aggregation_id = 29;
+
+  // Auto negotiation supported
+  int32 port_autoneg_supported = 30;
+
+  // Is auto negotiation enabled
+  int32 port_autoneg_enabled = 31;
+
+  // MAU type
+  string port_mau_type = 32;
+
+  // 10Base-T HD auto negotiation enabled
+  int32 port_autoneg_10baset_hd_enabled = 33;
+
+  // 10Base-T FD auto negotiation enabled
+  int32 port_autoneg_10baset_fd_enabled = 34;
+
+  // 100Base-TX HD auto negotiation enabled
+  int32 port_autoneg_100basetx_hd_enabled = 35;
+
+  // 100Base-TX FD auto negotiation enabled
+  int32 port_autoneg_100basetx_fd_enabled = 36;
+
+  // 100Base-T2 HD auto negotiation enabled
+  int32 port_autoneg_100baset2_hd_enabled = 37;
+
+  // 100Base-T2 FD auto negotiation enabled
+  int32 port_autoneg_100baset2_fd_enabled = 38;
+
+  // 100Base-T4 HD auto negotiation enabled
+  int32 port_autoneg_100baset4_hd_enabled = 39;
+
+  // 100Base-T4 FD auto negotiation enabled
+  int32 port_autoneg_100baset4_fd_enabled = 40;
+
+  // 1000Base-X HD auto negotiation enabled
+  int32 port_autoneg_1000basex_hd_enabled = 41;
+
+  // 1000Base-X FD auto negotiation enabled
+  int32 port_autoneg_1000basex_fd_enabled = 42;
+
+  // 1000Base-T HD auto negotiation enabled
+  int32 port_autoneg_1000baset_hd_enabled = 43;
+
+  // 1000Base-T FD auto negotiation enabled
+  int32 port_autoneg_1000baset_fd_enabled = 44;
+
+  // Dot3 power device type
+  string power_device_type = 45;
+
+  // MDI power supported
+  int32 power_mdi_supported = 46;
+
+  // Is MDI power enabled
+  int32 power_mdi_enabled = 47;
+
+  // Is power pair control enabled
+  int32 power_paircontrol_enabled = 48;
+
+  // Dot3 power pairs
+  string power_pairs = 49;
+
+  // Power class
+  string power_class = 50;
+
+  // Is 802.3at enabled
+  int32 power_8023at_enabled = 51;
+
+  // 802.3at power type
+  string power_8023at_power_type = 52;
+
+  // 802.3at power source
+  string power_8023at_power_source = 53;
+
+  // 802.3at power priority
+  string power_8023at_power_priority = 54;
+
+  // 802.3at power allocated
+  string power_8023at_power_allocated = 55;
+
+  // 802.3at power requested
+  string power_8023at_power_requested = 56;
+
+  // Chassis MED type
+  string med_device_type = 57;
+
+  // Is MED capabilities enabled
+  int32 med_capability_capabilities = 58;
+
+  // Is MED policy capability enabled
+  int32 med_capability_policy = 59;
+
+  // Is MED location capability enabled
+  int32 med_capability_location = 60;
+
+  // Is MED MDI PSE capability enabled
+  int32 med_capability_mdi_pse = 61;
+
+  // Is MED MDI PD capability enabled
+  int32 med_capability_mdi_pd = 62;
+
+  // Is MED inventory capability enabled
+  int32 med_capability_inventory = 63;
+
+  // Comma delimited list of MED policies
+  string med_policies = 64;
+
+  // Comma delimited list of vlan ids
+  string vlans = 65;
+
+  // Primary VLAN id
+  string pvid = 66;
+
+  // Comma delimited list of supported PPVIDs
+  string ppvids_supported = 67;
+
+  // Comma delimited list of enabled PPVIDs
+  string ppvids_enabled = 68;
+
+  // Comma delimited list of PIDs
+  string pids = 69;
+}

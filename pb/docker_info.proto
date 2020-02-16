@@ -1,0 +1,108 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Docker system information.
+message DockerInfo {
+
+  // Docker system ID
+  string id = 1;
+
+  // Total number of containers
+  int32 containers = 2;
+
+  // Number of containers currently running
+  int32 containers_running = 3;
+
+  // Number of containers in paused state
+  int32 containers_paused = 4;
+
+  // Number of containers in stopped state
+  int32 containers_stopped = 5;
+
+  // Number of images
+  int32 images = 6;
+
+  // Storage driver
+  string storage_driver = 7;
+
+  // 1 if memory limit support is enabled. 0 otherwise
+  int32 memory_limit = 8;
+
+  // 1 if swap limit support is enabled. 0 otherwise
+  int32 swap_limit = 9;
+
+  // 1 if kernel memory limit support is enabled. 0 otherwise
+  int32 kernel_memory = 10;
+
+  // 1 if CPU Completely Fair Scheduler (CFS) period support is enabled. 0 otherwise
+  int32 cpu_cfs_period = 11;
+
+  // 1 if CPU Completely Fair Scheduler (CFS) quota support is enabled. 0 otherwise
+  int32 cpu_cfs_quota = 12;
+
+  // 1 if CPU share weighting support is enabled. 0 otherwise
+  int32 cpu_shares = 13;
+
+  // 1 if CPU set selection support is enabled. 0 otherwise
+  int32 cpu_set = 14;
+
+  // 1 if IPv4 forwarding is enabled. 0 otherwise
+  int32 ipv4_forwarding = 15;
+
+  // 1 if bridge netfilter iptables is enabled. 0 otherwise
+  int32 bridge_nf_iptables = 16;
+
+  // 1 if bridge netfilter ip6tables is enabled. 0 otherwise
+  int32 bridge_nf_ip6tables = 17;
+
+  // 1 if Out-of-memory kill is disabled. 0 otherwise
+  int32 oom_kill_disable = 18;
+
+  // Logging driver
+  string logging_driver = 19;
+
+  // Control groups driver
+  string cgroup_driver = 20;
+
+  // Kernel version
+  string kernel_version = 21;
+
+  // Operating system
+  string os = 22;
+
+  // Operating system type
+  string os_type = 23;
+
+  // Hardware architecture
+  string architecture = 24;
+
+  // Number of CPUs
+  int32 cpus = 25;
+
+  // Total memory
+  int64 memory = 26;
+
+  // HTTP proxy
+  string http_proxy = 27;
+
+  // HTTPS proxy
+  string https_proxy = 28;
+
+  // Comma-separated list of domain extensions proxy should not be used for
+  string no_proxy = 29;
+
+  // Name of the docker host
+  string name = 30;
+
+  // Server version
+  string server_version = 31;
+
+  // Docker root directory
+  string root_dir = 32;
+}

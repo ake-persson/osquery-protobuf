@@ -1,0 +1,39 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Process memory mapped files and pseudo device/regions.
+message ProcessMemoryMap {
+
+  // Process (or thread) ID
+  int32 pid = 1;
+
+  // Virtual start address (hex)
+  string start = 2;
+
+  // Virtual end address (hex)
+  string end = 3;
+
+  // r=read
+  string permissions = 4;
+
+  // Offset into mapped path
+  int64 offset = 5;
+
+  // MA:MI Major/minor device ID
+  string device = 6;
+
+  // Mapped path inode
+  int32 inode = 7;
+
+  // Path to mapped file or mapped type
+  string path = 8;
+
+  // 1 If path is a pseudo path
+  int32 pseudo = 9;
+}

@@ -1,0 +1,24 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Information about the event publishers and subscribers.
+message OsqueryEvent {
+
+  // Event publisher or subscriber name
+  string name = 1;
+
+  // Name of the associated publisher
+  string publisher = 2;
+
+  // Either publisher or subscriber
+  string type = 3;
+
+  // Publisher only: number of runloop restarts
+  int32 refreshes = 4;
+}

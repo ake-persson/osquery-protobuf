@@ -1,0 +1,30 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// The managed configuration policies from AD, MDM, MCX, etc.
+message ManagedPolicy {
+
+  // System or manager-chosen domain key
+  string domain = 1;
+
+  // Optional UUID assigned to policy set
+  string uuid = 2;
+
+  // Policy key name
+  string name = 3;
+
+  // Policy value
+  string value = 4;
+
+  // Policy applies only this user
+  string username = 5;
+
+  // 1 if policy was loaded manually
+  int32 manual = 6;
+}

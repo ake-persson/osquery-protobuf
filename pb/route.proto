@@ -1,0 +1,42 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// The active route table for the host system.
+message Route {
+
+  // Destination IP address
+  string destination = 1;
+
+  // Netmask length
+  int32 netmask = 2;
+
+  // Route gateway
+  string gateway = 3;
+
+  // Route source
+  string source = 4;
+
+  // Flags to describe route
+  int32 flags = 5;
+
+  // Route local interface
+  string interface = 6;
+
+  // Maximum Transmission Unit for the route
+  int32 mtu = 7;
+
+  // Cost of route. Lowest is preferred
+  int32 metric = 8;
+
+  // Type of route
+  string type = 9;
+
+  // Max hops expected
+  int32 hopcount = 10;
+}

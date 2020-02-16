@@ -1,0 +1,21 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// A key/value table of environment variables for each process.
+message ProcessEnv {
+
+  // Process (or thread) ID
+  int32 pid = 1;
+
+  // Environment variable name
+  string key = 2;
+
+  // Environment variable value
+  string value = 3;
+}

@@ -1,0 +1,24 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Line-parsed /etc/protocols.
+message EtcProtocol {
+
+  // Protocol name
+  string name = 1;
+
+  // Protocol number
+  int32 number = 2;
+
+  // Protocol alias
+  string alias = 3;
+
+  // Comment with protocol description
+  string comment = 4;
+}

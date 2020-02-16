@@ -1,0 +1,36 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// ELF segment information.
+message ElfSegment {
+
+  // Segment type/name
+  string name = 1;
+
+  // Segment offset in file
+  int32 offset = 2;
+
+  // Segment virtual address in memory
+  int32 vaddr = 3;
+
+  // Size of segment in file
+  int32 psize = 4;
+
+  // Segment offset in memory
+  int32 msize = 5;
+
+  // Segment attributes
+  string flags = 6;
+
+  // Segment alignment
+  int32 align = 7;
+
+  // Path to ELF file
+  string path = 8;
+}

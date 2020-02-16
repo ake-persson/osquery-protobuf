@@ -1,0 +1,51 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Queries the Apple System Log data structure for system events.
+message Asl {
+
+  // Unix timestamp.  Set automatically
+  int32 time = 1;
+
+  // Nanosecond time.
+  int32 time_nano_sec = 2;
+
+  // Sender's address (set by the server).
+  string host = 3;
+
+  // Sender's identification string.  Default is process name.
+  string sender = 4;
+
+  // Sender's facility.  Default is 'user'.
+  string facility = 5;
+
+  // Sending process ID encoded as a string.  Set automatically.
+  int32 pid = 6;
+
+  // GID that sent the log message (set by the server).
+  int64 gid = 7;
+
+  // UID that sent the log message (set by the server).
+  int64 uid = 8;
+
+  // Log level number.  See levels in asl.h.
+  int32 level = 9;
+
+  // Message text.
+  string message = 10;
+
+  // Reference PID for messages proxied by launchd
+  int32 ref_pid = 11;
+
+  // Reference process for messages proxied by launchd
+  string ref_proc = 12;
+
+  // Extra columns
+  string extra = 13;
+}

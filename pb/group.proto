@@ -1,0 +1,30 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Local system groups.
+message Group {
+
+  // Unsigned int64 group ID
+  int64 gid = 1;
+
+  // A signed int64 version of gid
+  int64 gid_signed = 2;
+
+  // Canonical local group name
+  string groupname = 3;
+
+  // Unique group ID
+  string group_sid = 4;
+
+  // Remarks or comments associated with the group
+  string comment = 5;
+
+  // IsHidden attribute set in OpenDirectory
+  int32 is_hidden = 6;
+}

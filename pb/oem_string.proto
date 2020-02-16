@@ -1,0 +1,21 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// OEM defined strings retrieved from SMBIOS.
+message OemString {
+
+  // Handle
+  string handle = 1;
+
+  // The string index of the structure
+  int32 number = 2;
+
+  // The value of the OEM string
+  string value = 3;
+}

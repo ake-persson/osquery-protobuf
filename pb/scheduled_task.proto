@@ -1,0 +1,42 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Lists all of the tasks in the Windows task scheduler.
+message ScheduledTask {
+
+  // Name of the scheduled task
+  string name = 1;
+
+  // Actions executed by the scheduled task
+  string action = 2;
+
+  // Path to the executable to be run
+  string path = 3;
+
+  // Whether or not the scheduled task is enabled
+  int32 enabled = 4;
+
+  // State of the scheduled task
+  string state = 5;
+
+  // Whether or not the task is visible in the UI
+  int32 hidden = 6;
+
+  // Timestamp the task last ran
+  int32 last_run_time = 7;
+
+  // Timestamp the task is scheduled to run next
+  int32 next_run_time = 8;
+
+  // Exit status message of the last task run
+  string last_run_message = 9;
+
+  // Exit status code of the last task run
+  string last_run_code = 10;
+}

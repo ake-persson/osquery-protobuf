@@ -1,0 +1,30 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Perform an http request and return stats about it.
+message Curl {
+
+  // The url for the request
+  string url = 1;
+
+  // The HTTP method for the request
+  string method = 2;
+
+  // The HTTP status code for the response
+  int32 response_code = 3;
+
+  // Time taken to complete the request
+  int64 round_trip_time = 4;
+
+  // Number of bytes in the response
+  int64 bytes = 5;
+
+  // The HTTP response body
+  string result = 6;
+}

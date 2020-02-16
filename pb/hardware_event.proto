@@ -1,0 +1,48 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Hardware (PCI/USB/HID) events from UDEV or IOKit.
+message HardwareEvent {
+
+  // Remove
+  string action = 1;
+
+  // Local device path assigned (optional)
+  string path = 2;
+
+  // Type of hardware and hardware event
+  string type = 3;
+
+  // Driver claiming the device
+  string driver = 4;
+
+  // Hardware device vendor
+  string vendor = 5;
+
+  // Hex encoded Hardware vendor identifier
+  string vendor_id = 6;
+
+  // Hardware device model
+  string model = 7;
+
+  // Hex encoded Hardware model identifier
+  string model_id = 8;
+
+  // Device serial (optional)
+  string serial = 9;
+
+  // Device revision (optional)
+  string revision = 10;
+
+  // Time of hardware event
+  int64 time = 11;
+
+  // Event ID
+  string eid = 12;
+}

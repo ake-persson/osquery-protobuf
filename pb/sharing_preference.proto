@@ -1,0 +1,42 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// OS X Sharing preferences.
+message SharingPreference {
+
+  // 1 If screen sharing is enabled else 0
+  int32 screen_sharing = 1;
+
+  // 1 If file sharing is enabled else 0
+  int32 file_sharing = 2;
+
+  // 1 If printer sharing is enabled else 0
+  int32 printer_sharing = 3;
+
+  // 1 If remote login is enabled else 0
+  int32 remote_login = 4;
+
+  // 1 If remote management is enabled else 0
+  int32 remote_management = 5;
+
+  // 1 If remote apple events are enabled else 0
+  int32 remote_apple_events = 6;
+
+  // 1 If internet sharing is enabled else 0
+  int32 internet_sharing = 7;
+
+  // 1 If bluetooth sharing is enabled for any user else 0
+  int32 bluetooth_sharing = 8;
+
+  // 1 If CD or DVD sharing is enabled else 0
+  int32 disc_sharing = 9;
+
+  // 1 If content caching is enabled else 0
+  int32 content_caching = 10;
+}

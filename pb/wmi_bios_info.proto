@@ -1,0 +1,18 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Lists important information from the system bios.
+message WmiBiosInfo {
+
+  // Name of the Bios setting
+  string name = 1;
+
+  // Value of the Bios setting
+  string value = 2;
+}

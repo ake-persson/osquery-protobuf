@@ -1,0 +1,21 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Docker volume labels.
+message DockerVolumeLabel {
+
+  // Volume name
+  string name = 1;
+
+  // Label key
+  string key = 2;
+
+  // Optional label value
+  string value = 3;
+}

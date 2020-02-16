@@ -1,0 +1,24 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Drive devices used for Software RAID.
+message MdDrife {
+
+  // md device name
+  string md_device_name = 1;
+
+  // Drive device name
+  string drive_name = 2;
+
+  // Slot position of disk
+  int32 slot = 3;
+
+  // State of the drive
+  string state = 4;
+}

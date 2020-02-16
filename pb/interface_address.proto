@@ -1,0 +1,33 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Network interfaces and relevant metadata.
+message InterfaceAddress {
+
+  // Interface name
+  string interface = 1;
+
+  // Specific address for interface
+  string address = 2;
+
+  // Interface netmask
+  string mask = 3;
+
+  // Broadcast address for the interface
+  string broadcast = 4;
+
+  // PtP address for the interface
+  string point_to_point = 5;
+
+  // Type of address. One of dhcp
+  string type = 6;
+
+  // The friendly display name of the interface.
+  string friendly_name = 7;
+}

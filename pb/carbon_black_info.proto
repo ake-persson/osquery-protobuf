@@ -1,0 +1,75 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Returns info about a Carbon Black sensor install.
+message CarbonBlackInfo {
+
+  // Sensor ID of the Carbon Black sensor
+  int32 sensor_id = 1;
+
+  // Sensor group
+  string config_name = 2;
+
+  // If the sensor is configured to send back binaries to the Carbon Black server
+  int32 collect_store_files = 3;
+
+  // If the sensor is configured to capture module loads
+  int32 collect_module_loads = 4;
+
+  // If the sensor is configured to collect metadata of binaries
+  int32 collect_module_info = 5;
+
+  // If the sensor is configured to collect file modification events
+  int32 collect_file_mods = 6;
+
+  // If the sensor is configured to collect registry modification events
+  int32 collect_reg_mods = 7;
+
+  // If the sensor is configured to collect network connections
+  int32 collect_net_conns = 8;
+
+  // If the sensor is configured to process events
+  int32 collect_processes = 9;
+
+  // If the sensor is configured to cross process events
+  int32 collect_cross_processes = 10;
+
+  // If the sensor is configured to EMET events
+  int32 collect_emet_events = 11;
+
+  // If the sensor is configured to collect non binary file writes
+  int32 collect_data_file_writes = 12;
+
+  // If the sensor is configured to collect the user running a process
+  int32 collect_process_user_context = 13;
+
+  // Unknown
+  int32 collect_sensor_operations = 14;
+
+  // Event file disk quota in MB
+  int32 log_file_disk_quota_mb = 15;
+
+  // Event file disk quota in a percentage
+  int32 log_file_disk_quota_percentage = 16;
+
+  // If the sensor is configured to report tamper events
+  int32 protection_disabled = 17;
+
+  // IP address of the sensor
+  string sensor_ip_addr = 18;
+
+  // Carbon Black server
+  string sensor_backend_server = 19;
+
+  // Size in bytes of Carbon Black event files on disk
+  int32 event_queue = 20;
+
+  // Size in bytes of binaries waiting to be sent to Carbon Black server
+  int32 binary_queue = 21;
+}

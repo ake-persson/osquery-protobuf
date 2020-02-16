@@ -1,0 +1,45 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// OS X applications installed in known search paths (e.g., /Applications).
+message App {
+
+  // Name of the Name.app folder
+  string name = 1;
+
+  // Absolute and full Name.app path
+  string path = 2;
+
+  // Info properties CFBundleName label
+  string bundle_name = 3;
+
+  // Info properties CFBundleVersion label
+  string bundle_version = 4;
+
+  // Application-set environment variables
+  string environment = 5;
+
+  // Does the app identify as a background agent
+  string element = 6;
+
+  // Info properties DTCompiler label
+  string compiler = 7;
+
+  // Info properties CFBundleDisplayName label
+  string display_name = 8;
+
+  // Info properties CFBundleGetInfoString label
+  string info_string = 9;
+
+  // Info properties NSHumanReadableCopyright label
+  string copyright = 10;
+
+  // The time that the app was last used
+  double last_opened_time = 11;
+}

@@ -1,0 +1,30 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Similar to the hash table, but use TSK and allow block address access.
+message DeviceHash {
+
+  // Absolute file path to device node
+  string device = 1;
+
+  // A partition number
+  string partition = 2;
+
+  // Filesystem inode number
+  int64 inode = 3;
+
+  // MD5 hash of provided inode data
+  string md5 = 4;
+
+  // SHA1 hash of provided inode data
+  string sha1 = 5;
+
+  // SHA256 hash of provided inode data
+  string sha256 = 6;
+}

@@ -1,0 +1,36 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Opera browser extensions.
+message OperaExtension {
+
+  // Extension display name
+  string name = 1;
+
+  // Extension identifier
+  string identifier = 2;
+
+  // Extension-supplied version
+  string version = 3;
+
+  // Extension-optional description
+  string description = 4;
+
+  // Default locale supported by extension
+  string locale = 5;
+
+  // Extension-supplied update URI
+  string update_url = 6;
+
+  // Optional extension author
+  string author = 7;
+
+  // Path to extension folder
+  string path = 8;
+}

@@ -1,0 +1,45 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// System mounted devices and filesystems (not process specific).
+message Mount {
+
+  // Mounted device
+  string device = 1;
+
+  // Mounted device alias
+  string device_alias = 2;
+
+  // Mounted device path
+  string path = 3;
+
+  // Mounted device type
+  string type = 4;
+
+  // Block size in bytes
+  int64 blocks_size = 5;
+
+  // Mounted device used blocks
+  int64 blocks = 6;
+
+  // Mounted device free blocks
+  int64 blocks_free = 7;
+
+  // Mounted device available blocks
+  int64 blocks_available = 8;
+
+  // Mounted device used inodes
+  int64 inodes = 9;
+
+  // Mounted device free inodes
+  int64 inodes_free = 10;
+
+  // Mounted device flags
+  string flags = 11;
+}

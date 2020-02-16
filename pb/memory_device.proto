@@ -1,0 +1,72 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Physical memory device (type 17) information retrieved from SMBIOS.
+message MemoryDevice {
+
+  // Handle
+  string handle = 1;
+
+  // The memory array that the device is attached to
+  string array_handle = 2;
+
+  // Implementation form factor for this memory device
+  string form_factor = 3;
+
+  // Total width
+  int32 total_width = 4;
+
+  // Data width
+  int32 data_width = 5;
+
+  // Size of memory device in Megabyte
+  int32 size = 6;
+
+  // Identifies if memory device is one of a set of devices.  A value of 0 indicates no set affiliation.
+  int32 set = 7;
+
+  // String number of the string that identifies the physically-labeled socket or board position where the memory device is located
+  string device_locator = 8;
+
+  // String number of the string that identifies the physically-labeled bank where the memory device is located
+  string bank_locator = 9;
+
+  // Type of memory used
+  string memory_type = 10;
+
+  // Additional details for memory device
+  string memory_type_details = 11;
+
+  // Max speed of memory device in megatransfers per second (MT/s)
+  int32 max_speed = 12;
+
+  // Configured speed of memory device in megatransfers per second (MT/s)
+  int32 configured_clock_speed = 13;
+
+  // Manufacturer ID string
+  string manufacturer = 14;
+
+  // Serial number of memory device
+  string serial_number = 15;
+
+  // Manufacturer specific asset tag of memory device
+  string asset_tag = 16;
+
+  // Manufacturer specific serial number of memory device
+  string part_number = 17;
+
+  // Minimum operating voltage of device in millivolts
+  int32 min_voltage = 18;
+
+  // Maximum operating voltage of device in millivolts
+  int32 max_voltage = 19;
+
+  // Configured operating voltage of device in millivolts
+  int32 configured_voltage = 20;
+}

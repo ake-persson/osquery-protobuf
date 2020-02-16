@@ -1,0 +1,108 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// All running processes on the host system.
+message Process {
+
+  // Process (or thread) ID
+  int64 pid = 1;
+
+  // The process path or shorthand argv[0]
+  string name = 2;
+
+  // Path to executed binary
+  string path = 3;
+
+  // Complete argv
+  string cmdline = 4;
+
+  // Process state
+  string state = 5;
+
+  // Process current working directory
+  string cwd = 6;
+
+  // Process virtual root directory
+  string root = 7;
+
+  // Unsigned user ID
+  int64 uid = 8;
+
+  // Unsigned group ID
+  int64 gid = 9;
+
+  // Unsigned effective user ID
+  int64 euid = 10;
+
+  // Unsigned effective group ID
+  int64 egid = 11;
+
+  // Unsigned saved user ID
+  int64 suid = 12;
+
+  // Unsigned saved group ID
+  int64 sgid = 13;
+
+  // Bytes of unpagable memory used by process
+  int64 wired_size = 14;
+
+  // Bytes of private memory used by process
+  int64 resident_size = 15;
+
+  // CPU time in milliseconds spent in user space
+  int64 user_time = 16;
+
+  // CPU time in milliseconds spent in kernel space
+  int64 system_time = 17;
+
+  // Bytes read from disk
+  int64 disk_bytes_read = 18;
+
+  // Bytes written to disk
+  int64 disk_bytes_written = 19;
+
+  // Process start time in seconds since Epoch
+  int64 start_time = 20;
+
+  // Process parent's PID
+  int64 parent = 21;
+
+  // Process group
+  int64 pgroup = 22;
+
+  // Number of threads used by process
+  int32 threads = 23;
+
+  // Process nice level (-20 to 20
+  int32 nice = 24;
+
+  // Process uses elevated token yes=1
+  int32 is_elevated_token = 25;
+
+  // Elapsed time in seconds this process has been running.
+  int64 elapsed_time = 26;
+
+  // Total number of handles that the process has open. This number is the sum of the handles currently opened by each thread in the process.
+  int64 handle_count = 27;
+
+  // Returns elapsed time that all of the threads of this process used the processor to execute instructions in 100 nanoseconds ticks.
+  int64 percent_processor_time = 28;
+
+  // A 64bit pid that is never reused. Returns -1 if we couldn't gather them from the system.
+  int64 upid = 29;
+
+  // The 64bit parent pid that is never reused. Returns -1 if we couldn't gather them from the system.
+  int64 uppid = 30;
+
+  // A 64bit pid that is never reused. Returns -1 if we couldn't gather them from the system.
+  int32 cpu_type = 31;
+
+  // The 64bit parent pid that is never reused. Returns -1 if we couldn't gather them from the system.
+  int32 cpu_subtype = 32;
+}

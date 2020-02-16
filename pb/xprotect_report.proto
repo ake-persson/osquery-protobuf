@@ -1,0 +1,21 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Database of XProtect matches (if user generated/sent an XProtect report).
+message XprotectReport {
+
+  // Description of XProtected malware
+  string name = 1;
+
+  // Action taken by user after prompted
+  string user_action = 2;
+
+  // Quarantine alert time
+  string time = 3;
+}

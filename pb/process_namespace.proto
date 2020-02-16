@@ -1,0 +1,36 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Linux namespaces for processes running on the host system.
+message ProcessNamespace {
+
+  // Process (or thread) ID
+  int32 pid = 1;
+
+  // cgroup namespace inode
+  string cgroup_namespace = 2;
+
+  // ipc namespace inode
+  string ipc_namespace = 3;
+
+  // mnt namespace inode
+  string mnt_namespace = 4;
+
+  // net namespace inode
+  string net_namespace = 5;
+
+  // pid namespace inode
+  string pid_namespace = 6;
+
+  // user namespace inode
+  string user_namespace = 7;
+
+  // uts namespace inode
+  string uts_namespace = 8;
+}

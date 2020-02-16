@@ -1,0 +1,30 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// File (executable, bundle, installer, disk) code signing status.
+message Authenticode {
+
+  // Must provide a path or directory
+  string path = 1;
+
+  // The original program name that the publisher has signed
+  string original_program_name = 2;
+
+  // The certificate serial number
+  string serial_number = 3;
+
+  // The certificate issuer name
+  string issuer_name = 4;
+
+  // The certificate subject name
+  string subject_name = 5;
+
+  // The signature check result
+  string result = 6;
+}

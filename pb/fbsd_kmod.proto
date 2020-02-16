@@ -1,0 +1,24 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Loaded FreeBSD kernel modules.
+message FbsdKmod {
+
+  // Module name
+  string name = 1;
+
+  // Size of module content
+  int32 size = 2;
+
+  // Module reverse dependencies
+  int32 refs = 3;
+
+  // Kernel module address
+  string address = 4;
+}

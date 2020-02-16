@@ -1,0 +1,21 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// OS X application schemes and handlers (e.g., http, file, mailto).
+message AppScheme {
+
+  // Name of the scheme/protocol
+  string scheme = 1;
+
+  // Application label for the handler
+  string handler = 2;
+
+  // 1 if this handler is the OS default
+  int32 enabled = 3;
+}

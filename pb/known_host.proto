@@ -1,0 +1,18 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// A line-delimited known_hosts table.
+message KnownHost {
+
+  // parsed authorized keys line
+  string key = 1;
+
+  // Path to known_hosts file
+  string key_file = 2;
+}

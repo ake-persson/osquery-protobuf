@@ -1,0 +1,39 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Provides the overall system's network state.
+message Connectivity {
+
+  // True if the all interfaces are not connected to any network
+  int32 disconnected = 1;
+
+  // True if any interface is connected via IPv4
+  int32 ipv4_no_traffic = 2;
+
+  // True if any interface is connected via IPv6
+  int32 ipv6_no_traffic = 3;
+
+  // True if any interface is connected to the local subnet via IPv4
+  int32 ipv4_subnet = 4;
+
+  // True if any interface is connected to a routed network via IPv4
+  int32 ipv4_local_network = 5;
+
+  // True if any interface is connected to the Internet via IPv4
+  int32 ipv4_internet = 6;
+
+  // True if any interface is connected to the local subnet via IPv6
+  int32 ipv6_subnet = 7;
+
+  // True if any interface is connected to a routed network via IPv6
+  int32 ipv6_local_network = 8;
+
+  // True if any interface is connected to the Internet via IPv6
+  int32 ipv6_internet = 9;
+}

@@ -1,0 +1,21 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// 
+message Autoexec {
+
+  // Path to the executable
+  string path = 1;
+
+  // Name of the program
+  string name = 2;
+
+  // Source table of the autoexec item
+  string source = 3;
+}

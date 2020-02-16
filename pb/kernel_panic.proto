@@ -1,0 +1,51 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// System kernel panic logs.
+message KernelPanic {
+
+  // Location of log file
+  string path = 1;
+
+  // Formatted time of the event
+  string time = 2;
+
+  // A space delimited line of register:value pairs
+  string registers = 3;
+
+  // Backtrace of the crashed module
+  string frame_backtrace = 4;
+
+  // Modules appearing in the crashed module's backtrace
+  string module_backtrace = 5;
+
+  // Module dependencies existing in crashed module's backtrace
+  string dependencies = 6;
+
+  // Process name corresponding to crashed thread
+  string name = 7;
+
+  // Version of the operating system
+  string os_version = 8;
+
+  // Version of the system kernel
+  string kernel_version = 9;
+
+  // Physical system model
+  string system_model = 10;
+
+  // System uptime at kernel panic in nanoseconds
+  int64 uptime = 11;
+
+  // Last loaded module before panic
+  string last_loaded = 12;
+
+  // Last unloaded module before panic
+  string last_unloaded = 13;
+}

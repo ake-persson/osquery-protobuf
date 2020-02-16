@@ -1,0 +1,24 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Database of the machine's XProtect browser-related signatures.
+message XprotectMetum {
+
+  // Browser plugin or extension identifier
+  string identifier = 1;
+
+  // Either plugin or extension
+  string type = 2;
+
+  // Developer identity (SHA1) of extension
+  string developer_id = 3;
+
+  // The minimum allowed plugin version.
+  string min_version = 4;
+}

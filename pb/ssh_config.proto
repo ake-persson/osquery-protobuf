@@ -1,0 +1,21 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// A table of parsed ssh_configs.
+message SshConfig {
+
+  // The host or match block
+  string block = 1;
+
+  // The option and value
+  string option = 2;
+
+  // Path to the ssh_config file
+  string ssh_config_file = 3;
+}

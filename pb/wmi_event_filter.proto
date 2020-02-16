@@ -1,0 +1,27 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Lists WMI event filters.
+message WmiEventFilter {
+
+  // Unique identifier of an event filter.
+  string name = 1;
+
+  // Windows Management Instrumentation Query Language (WQL) event query that specifies the set of events for consumer notification
+  string query = 2;
+
+  // Query language that the query is written in.
+  string query_language = 3;
+
+  // The name of the class.
+  string class = 4;
+
+  // Relative path to the class or instance.
+  string relative_path = 5;
+}

@@ -1,0 +1,18 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Line-parsed /etc/hosts.
+message EtcHost {
+
+  // IP address mapping
+  string address = 1;
+
+  // Raw hosts mapping
+  string hostnames = 2;
+}

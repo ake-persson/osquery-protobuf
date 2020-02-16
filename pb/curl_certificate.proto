@@ -1,0 +1,48 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Inspect TLS certificates by connecting to input hostnames.
+message CurlCertificate {
+
+  // Hostname (domain[:port]) to CURL
+  string hostname = 1;
+
+  // Common name of company issued to
+  string common_name = 2;
+
+  // Organization issued to
+  string organization = 3;
+
+  // Organization unit issued to
+  string organization_unit = 4;
+
+  // Certificate serial number
+  string serial_number = 5;
+
+  // Issuer common name
+  string issuer_common_name = 6;
+
+  // Issuer organization
+  string issuer_organization = 7;
+
+  // Issuer organization unit
+  string issuer_organization_unit = 8;
+
+  // Period of validity start date
+  string valid_from = 9;
+
+  // Period of validity end date
+  string valid_to = 10;
+
+  // SHA-256 fingerprint
+  string sha256_fingerprint = 11;
+
+  // SHA1 fingerprint
+  string sha1_fingerprint = 12;
+}

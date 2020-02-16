@@ -1,0 +1,21 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// macOS applications currently running on the host system.
+message RunningApp {
+
+  // The pid of the application
+  int32 pid = 1;
+
+  // The bundle identifier of the application
+  string bundle_identifier = 2;
+
+  // 1 if the application is in focus
+  int32 is_active = 3;
+}

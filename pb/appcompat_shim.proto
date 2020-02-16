@@ -1,0 +1,30 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Application Compatibility shims are a way to persist malware. This table presents the AppCompat Shim information from the registry in a nice format. See http://files.brucon.org/2015/Tomczak_and_Ballenthin_Shims_for_the_Win.pdf for more details.
+message AppcompatShim {
+
+  // Name of the executable that is being shimmed. This is pulled from the registry.
+  string executable = 1;
+
+  // This is the path to the SDB database.
+  string path = 2;
+
+  // Description of the SDB.
+  string description = 3;
+
+  // Install time of the SDB
+  int32 install_time = 4;
+
+  // Type of the SDB database.
+  string type = 5;
+
+  // Unique GUID of the SDB.
+  string sdb_id = 6;
+}

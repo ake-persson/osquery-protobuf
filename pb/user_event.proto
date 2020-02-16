@@ -1,0 +1,45 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Track user events from the audit framework.
+message UserEvent {
+
+  // User ID
+  int64 uid = 1;
+
+  // Audit User ID
+  int64 auid = 2;
+
+  // Process (or thread) ID
+  int64 pid = 3;
+
+  // Message from the event
+  string message = 4;
+
+  // The file description for the process socket
+  int32 type = 5;
+
+  // Supplied path from event
+  string path = 6;
+
+  // The Internet protocol address or family ID
+  string address = 7;
+
+  // The network protocol ID
+  string terminal = 8;
+
+  // Time of execution in UNIX time
+  int64 time = 9;
+
+  // Time of execution in system uptime
+  int64 uptime = 10;
+
+  // Event ID
+  string eid = 11;
+}

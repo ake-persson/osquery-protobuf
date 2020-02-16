@@ -1,0 +1,57 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// System information for identification.
+message SystemInfo {
+
+  // Network hostname including domain
+  string hostname = 1;
+
+  // Unique ID provided by the system
+  string uuid = 2;
+
+  // CPU type
+  string cpu_type = 3;
+
+  // CPU subtype
+  string cpu_subtype = 4;
+
+  // CPU brand string
+  string cpu_brand = 5;
+
+  // Number of physical CPU cores in to the system
+  int32 cpu_physical_cores = 6;
+
+  // Number of logical CPU cores available to the system
+  int32 cpu_logical_cores = 7;
+
+  // Microcode version
+  string cpu_microcode = 8;
+
+  // Total physical memory in bytes
+  int64 physical_memory = 9;
+
+  // Hardware or board vendor
+  string hardware_vendor = 10;
+
+  // Hardware or board model
+  string hardware_model = 11;
+
+  // Hardware or board version
+  string hardware_version = 12;
+
+  // Device or board serial number
+  string hardware_serial = 13;
+
+  // Friendly computer name (optional)
+  string computer_name = 14;
+
+  // Local hostname (optional)
+  string local_hostname = 15;
+}

@@ -1,0 +1,36 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Information about EFI/UEFI/ROM and platform/boot.
+message PlatformInfo {
+
+  // Platform code vendor
+  string vendor = 1;
+
+  // Platform code version
+  string version = 2;
+
+  // Self-reported platform code update date
+  string date = 3;
+
+  // BIOS major and minor revision
+  string revision = 4;
+
+  // Relative address of firmware mapping
+  string address = 5;
+
+  // Size in bytes of firmware
+  string size = 6;
+
+  // (Optional) size of firmware volume
+  int32 volume_size = 7;
+
+  // Platform-specific additional information
+  string extra = 8;
+}

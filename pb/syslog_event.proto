@@ -1,0 +1,36 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// 
+message SyslogEvent {
+
+  // Current unix epoch time
+  int64 time = 1;
+
+  // Time known to syslog
+  string datetime = 2;
+
+  // Hostname configured for syslog
+  string host = 3;
+
+  // Syslog severity
+  int32 severity = 4;
+
+  // Syslog facility
+  string facility = 5;
+
+  // The syslog tag
+  string tag = 6;
+
+  // The syslog message
+  string message = 7;
+
+  // Event ID
+  string eid = 8;
+}

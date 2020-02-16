@@ -1,0 +1,45 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Windows Event logs.
+message WindowsEvent {
+
+  // Timestamp the event was received
+  int64 time = 1;
+
+  // System time at which the event occurred
+  string datetime = 2;
+
+  // Source or channel of the event
+  string source = 3;
+
+  // Provider name of the event
+  string provider_name = 4;
+
+  // Provider guid of the event
+  string provider_guid = 5;
+
+  // Event ID of the event
+  int32 eventid = 6;
+
+  // Task value associated with the event
+  int32 task = 7;
+
+  // The severity level associated with the event
+  int32 level = 8;
+
+  // A bitmask of the keywords defined in the event
+  int64 keywords = 9;
+
+  // Data associated with the event
+  string data = 10;
+
+  // Event ID
+  string eid = 11;
+}

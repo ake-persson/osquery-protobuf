@@ -1,0 +1,33 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Applications and binaries set as user/login startup items.
+message StartupItem {
+
+  // Name of startup item
+  string name = 1;
+
+  // Path of startup item
+  string path = 2;
+
+  // Arguments provided to startup executable
+  string args = 3;
+
+  // Startup Item or Login Item
+  string type = 4;
+
+  // Directory or plist containing startup item
+  string source = 5;
+
+  // Startup status; either enabled or disabled
+  string status = 6;
+
+  // The user associated with the startup item
+  string username = 7;
+}

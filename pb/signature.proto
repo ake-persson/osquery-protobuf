@@ -1,0 +1,30 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// File (executable, bundle, installer, disk) code signing status.
+message Signature {
+
+  // If applicable
+  string arch = 1;
+
+  // 1 If the file is signed else 0
+  int32 signed = 2;
+
+  // The signing identifier sealed into the signature
+  string identifier = 3;
+
+  // Hash of the application Code Directory
+  string cdhash = 4;
+
+  // The team signing identifier sealed into the signature
+  string team_identifier = 5;
+
+  // Certificate Common Name
+  string authority = 6;
+}

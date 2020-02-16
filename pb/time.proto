@@ -1,0 +1,51 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Track current date and time in the system.
+message Time {
+
+  // Current weekday in the system
+  string weekday = 1;
+
+  // Current year in the system
+  int32 year = 2;
+
+  // Current month in the system
+  int32 month = 3;
+
+  // Current day in the system
+  int32 day = 4;
+
+  // Current hour in the system
+  int32 hour = 5;
+
+  // Current minutes in the system
+  int32 minutes = 6;
+
+  // Current seconds in the system
+  int32 seconds = 7;
+
+  // Current timezone in the system
+  string timezone = 8;
+
+  // Current local timezone in the system
+  string local_timezone = 9;
+
+  // Current timestamp (log format) in the system
+  string timestamp = 10;
+
+  // Current date and time (ISO format
+  string datetime = 11;
+
+  // Current time (ISO format) in the system
+  string iso_8601 = 12;
+
+  // Timestamp value in 100 nanosecond units.
+  int64 win_timestamp = 13;
+}

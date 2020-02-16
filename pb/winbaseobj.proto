@@ -1,0 +1,21 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Lists named Windows objects in the default object directories, across all terminal services sessions.
+message Winbaseobj {
+
+  // Terminal Services Session Id
+  int32 session_id = 1;
+
+  // Object Name
+  string object_name = 2;
+
+  // Object Type
+  string object_type = 3;
+}

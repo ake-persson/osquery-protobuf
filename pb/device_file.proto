@@ -1,0 +1,48 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Similar to the file table, but use TSK and allow block address access.
+message DeviceFile {
+
+  // Name portion of file path
+  string filename = 1;
+
+  // Filesystem inode number
+  int64 inode = 2;
+
+  // Owning user ID
+  int64 uid = 3;
+
+  // Owning group ID
+  int64 gid = 4;
+
+  // Permission bits
+  string mode = 5;
+
+  // Size of file in bytes
+  int64 size = 6;
+
+  // Block size of filesystem
+  int32 block_size = 7;
+
+  // Last access time
+  int64 atime = 8;
+
+  // Last modification time
+  int64 mtime = 9;
+
+  // Creation time
+  int64 ctime = 10;
+
+  // Number of hard links
+  int32 hard_links = 11;
+
+  // File status
+  string type = 12;
+}

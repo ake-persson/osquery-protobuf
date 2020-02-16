@@ -1,0 +1,24 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// OS X Gatekeeper Details.
+message Gatekeeper {
+
+  // 1 If a Gatekeeper is enabled else 0
+  int32 assessments_enabled = 1;
+
+  // 1 If a Gatekeeper allows execution from identified developers else 0
+  int32 dev_id_enabled = 2;
+
+  // Version of Gatekeeper's gke.bundle
+  string version = 3;
+
+  // Version of Gatekeeper's gkopaque.bundle
+  string opaque_version = 4;
+}

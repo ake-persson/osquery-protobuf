@@ -1,0 +1,75 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Docker container processes.
+message DockerContainerProcess {
+
+  // Container ID
+  string id = 1;
+
+  // Process ID
+  int64 pid = 2;
+
+  // The process path or shorthand argv[0]
+  string name = 3;
+
+  // Complete argv
+  string cmdline = 4;
+
+  // Process state
+  string state = 5;
+
+  // User ID
+  int64 uid = 6;
+
+  // Group ID
+  int64 gid = 7;
+
+  // Effective user ID
+  int64 euid = 8;
+
+  // Effective group ID
+  int64 egid = 9;
+
+  // Saved user ID
+  int64 suid = 10;
+
+  // Saved group ID
+  int64 sgid = 11;
+
+  // Bytes of unpagable memory used by process
+  int64 wired_size = 12;
+
+  // Bytes of private memory used by process
+  int64 resident_size = 13;
+
+  // Process parent's PID
+  int64 parent = 14;
+
+  // Process group
+  int64 pgroup = 15;
+
+  // Number of threads used by process
+  int32 threads = 16;
+
+  // Process nice level (-20 to 20
+  int32 nice = 17;
+
+  // User name
+  string user = 18;
+
+  // Cumulative CPU time. [DD-]HH:MM:SS format
+  string time = 19;
+
+  // CPU utilization as percentage
+  double cpu = 20;
+
+  // Memory utilization as percentage
+  double mem = 21;
+}

@@ -1,0 +1,21 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Azure instance tags.
+message AzureInstanceTag {
+
+  // Unique identifier for the VM
+  string vm_id = 1;
+
+  // The tag key
+  string key = 2;
+
+  // The tag value
+  string value = 3;
+}

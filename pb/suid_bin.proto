@@ -1,0 +1,24 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// suid binaries in common locations.
+message SuidBin {
+
+  // Binary path
+  string path = 1;
+
+  // Binary owner username
+  string username = 2;
+
+  // Binary owner group
+  string groupname = 3;
+
+  // Binary permissions
+  string permissions = 4;
+}

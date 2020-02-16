@@ -1,0 +1,33 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Python packages installed in a system.
+message PythonPackage {
+
+  // Package display name
+  string name = 1;
+
+  // Package-supplied version
+  string version = 2;
+
+  // Package-supplied summary
+  string summary = 3;
+
+  // Optional package author
+  string author = 4;
+
+  // License under which package is launched
+  string license = 5;
+
+  // Path at which this module resides
+  string path = 6;
+
+  // Directory where Python modules are located
+  string directory = 7;
+}

@@ -1,0 +1,36 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Returns all completed print jobs from cups.
+message CupsJob {
+
+  // Title of the printed job
+  string title = 1;
+
+  // The printer the job was sent to
+  string destination = 2;
+
+  // The user who printed the job
+  string user = 3;
+
+  // The format of the print job
+  string format = 4;
+
+  // The size of the print job
+  int32 size = 5;
+
+  // When the job completed printing
+  int32 completed_time = 6;
+
+  // How long the job took to process
+  int32 processing_time = 7;
+
+  // When the print request was initiated
+  int32 creation_time = 8;
+}

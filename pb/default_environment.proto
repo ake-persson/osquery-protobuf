@@ -1,0 +1,21 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Default environment variables and values.
+message DefaultEnvironment {
+
+  // Name of the environment variable
+  string variable = 1;
+
+  // Value of the environment variable
+  string value = 2;
+
+  // 1 if the variable needs expanding
+  int32 expand = 3;
+}

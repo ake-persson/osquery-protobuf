@@ -1,0 +1,21 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// The installed homebrew package database.
+message HomebrewPackage {
+
+  // Package name
+  string name = 1;
+
+  // Package install path
+  string path = 2;
+
+  // Current 'linked' version
+  string version = 3;
+}

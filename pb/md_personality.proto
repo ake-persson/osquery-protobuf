@@ -1,0 +1,15 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Software RAID setting supported by the kernel.
+message MdPersonality {
+
+  // Name of personality supported by kernel
+  string name = 1;
+}

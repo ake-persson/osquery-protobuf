@@ -1,0 +1,33 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// BIOS (DMI) structure common details and content.
+message SmbiosTable {
+
+  // Table entry number
+  int32 number = 1;
+
+  // Table entry type
+  int32 type = 2;
+
+  // Table entry description
+  string description = 3;
+
+  // Table entry handle
+  int32 handle = 4;
+
+  // Header size in bytes
+  int32 header_size = 5;
+
+  // Table entry size in bytes
+  int32 size = 6;
+
+  // MD5 hash of table entry
+  string md5 = 7;
+}

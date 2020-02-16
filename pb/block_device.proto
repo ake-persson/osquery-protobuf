@@ -1,0 +1,39 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Block (buffered access) device file nodes: disks, ramdisks, and DMG containers.
+message BlockDevice {
+
+  // Block device name
+  string name = 1;
+
+  // Block device parent name
+  string parent = 2;
+
+  // Block device vendor string
+  string vendor = 3;
+
+  // Block device model string identifier
+  string model = 4;
+
+  // Block device size in blocks
+  int64 size = 5;
+
+  // Block size in bytes
+  int32 block_size = 6;
+
+  // Block device Universally Unique Identifier
+  string uuid = 7;
+
+  // Block device type string
+  string type = 8;
+
+  // Block device label string
+  string label = 9;
+}

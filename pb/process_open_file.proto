@@ -1,0 +1,21 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// File descriptors for each process.
+message ProcessOpenFile {
+
+  // Process (or thread) ID
+  int64 pid = 1;
+
+  // Process-specific file descriptor number
+  int64 fd = 2;
+
+  // Filesystem path of descriptor
+  string path = 3;
+}

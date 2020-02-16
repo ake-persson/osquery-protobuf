@@ -1,0 +1,27 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Docker container ports.
+message DockerContainerPort {
+
+  // Container ID
+  string id = 1;
+
+  // Protocol (tcp
+  string type = 2;
+
+  // Port inside the container
+  int32 port = 3;
+
+  // Host IP address on which public port is listening
+  string host_ip = 4;
+
+  // Host port
+  int32 host_port = 5;
+}

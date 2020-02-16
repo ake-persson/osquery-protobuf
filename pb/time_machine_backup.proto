@@ -1,0 +1,18 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Backups to drives using TimeMachine.
+message TimeMachineBackup {
+
+  // Time Machine destination ID
+  string destination_id = 1;
+
+  // Backup Date
+  int32 backup_date = 2;
+}

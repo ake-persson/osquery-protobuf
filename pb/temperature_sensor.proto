@@ -1,0 +1,24 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Machine's temperature sensors.
+message TemperatureSensor {
+
+  // The SMC key on OS X
+  string key = 1;
+
+  // Name of temperature source
+  string name = 2;
+
+  // Temperature in Celsius
+  double celsius = 3;
+
+  // Temperature in Fahrenheit
+  double fahrenheit = 4;
+}

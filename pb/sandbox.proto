@@ -1,0 +1,30 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// OS X application sandboxes container details.
+message Sandbox {
+
+  // UTI-format bundle or label ID
+  string label = 1;
+
+  // Sandbox owner
+  string user = 2;
+
+  // Application sandboxings enabled on container
+  int32 enabled = 3;
+
+  // Sandbox-specific identifier
+  string build_id = 4;
+
+  // Application bundle used by the sandbox
+  string bundle_path = 5;
+
+  // Path to sandbox container directory
+  string path = 6;
+}

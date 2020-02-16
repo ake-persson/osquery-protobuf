@@ -1,0 +1,30 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// The installed DEB package database.
+message DebPackage {
+
+  // Package name
+  string name = 1;
+
+  // Package version
+  string version = 2;
+
+  // Package source
+  string source = 3;
+
+  // Package size in bytes
+  int64 size = 4;
+
+  // Package architecture
+  string arch = 5;
+
+  // Package revision
+  string revision = 6;
+}

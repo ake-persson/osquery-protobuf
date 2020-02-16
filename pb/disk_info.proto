@@ -1,0 +1,45 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Retrieve basic information about the physical disks of a system.
+message DiskInfo {
+
+  // Number of detected partitions on disk.
+  int32 partitions = 1;
+
+  // Physical drive number of the disk.
+  int32 disk_index = 2;
+
+  // The interface type of the disk.
+  string type = 3;
+
+  // The unique identifier of the drive on the system.
+  string id = 4;
+
+  // The unique identifier of the drive on the system.
+  string pnp_device_id = 5;
+
+  // Size of the disk.
+  int64 disk_size = 6;
+
+  // The manufacturer of the disk.
+  string manufacturer = 7;
+
+  // Hard drive model.
+  string hardware_model = 8;
+
+  // The label of the disk object.
+  string name = 9;
+
+  // The serial number of the disk.
+  string serial = 10;
+
+  // The OS's description of the disk.
+  string description = 11;
+}

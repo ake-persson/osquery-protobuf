@@ -1,0 +1,39 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// All C/NPAPI browser plugin details for all users.
+message BrowserPlugin {
+
+  // Plugin display name
+  string name = 1;
+
+  // Plugin identifier
+  string identifier = 2;
+
+  // Plugin short version
+  string version = 3;
+
+  // Build SDK used to compile plugin
+  string sdk = 4;
+
+  // Plugin description text
+  string description = 5;
+
+  // Plugin language-localization
+  string development_region = 6;
+
+  // Plugin requires native execution
+  int32 native = 7;
+
+  // Path to plugin bundle
+  string path = 8;
+
+  // Is the plugin disabled. 1 = Disabled
+  int32 disabled = 9;
+}

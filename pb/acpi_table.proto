@@ -1,0 +1,21 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Firmware ACPI functional table common metadata and content.
+message AcpiTable {
+
+  // ACPI table name
+  string name = 1;
+
+  // Size of compiled table data
+  int32 size = 2;
+
+  // MD5 hash of table content
+  string md5 = 3;
+}

@@ -1,0 +1,27 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Linux kernel modules both loaded and within the load search path.
+message KernelModule {
+
+  // Module name
+  string name = 1;
+
+  // Size of module content
+  string size = 2;
+
+  // Module reverse dependencies
+  string used_by = 3;
+
+  // Kernel module status
+  string status = 4;
+
+  // Kernel module address
+  string address = 5;
+}

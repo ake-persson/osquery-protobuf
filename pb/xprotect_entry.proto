@@ -1,0 +1,33 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Database of the machine's XProtect signatures.
+message XprotectEntry {
+
+  // Description of XProtected malware
+  string name = 1;
+
+  // Launch services content type
+  string launch_type = 2;
+
+  // XProtect identity (SHA1) of content
+  string identity = 3;
+
+  // Use this file name to match
+  string filename = 4;
+
+  // Use this file type to match
+  string filetype = 5;
+
+  // Match any of the identities/patterns for this XProtect name
+  int32 optional = 6;
+
+  // Uses a match pattern instead of identity
+  int32 uses_pattern = 7;
+}

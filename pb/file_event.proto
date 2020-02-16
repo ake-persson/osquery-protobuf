@@ -1,0 +1,63 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Track time/action changes to files specified in configuration data.
+message FileEvent {
+
+  // The path associated with the event
+  string target_path = 1;
+
+  // The category of the file defined in the config
+  string category = 2;
+
+  // Change action (UPDATE
+  string action = 3;
+
+  // ID used during bulk update
+  int64 transaction_id = 4;
+
+  // Filesystem inode number
+  int64 inode = 5;
+
+  // Owning user ID
+  int64 uid = 6;
+
+  // Owning group ID
+  int64 gid = 7;
+
+  // Permission bits
+  string mode = 8;
+
+  // Size of file in bytes
+  int64 size = 9;
+
+  // Last access time
+  int64 atime = 10;
+
+  // Last modification time
+  int64 mtime = 11;
+
+  // Last status change time
+  int64 ctime = 12;
+
+  // The MD5 of the file after change
+  string md5 = 13;
+
+  // The SHA1 of the file after change
+  string sha1 = 14;
+
+  // The SHA256 of the file after change
+  string sha256 = 15;
+
+  // Time of file event
+  int64 time = 16;
+
+  // Event ID
+  string eid = 17;
+}

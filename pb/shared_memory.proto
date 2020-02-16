@@ -1,0 +1,51 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// OS shared memory regions.
+message SharedMemory {
+
+  // Shared memory segment ID
+  int32 shmid = 1;
+
+  // User ID of owning process
+  int64 owner_uid = 2;
+
+  // User ID of creator process
+  int64 creator_uid = 3;
+
+  // Process ID to last use the segment
+  int64 pid = 4;
+
+  // Process ID that created the segment
+  int64 creator_pid = 5;
+
+  // Attached time
+  int64 atime = 6;
+
+  // Detached time
+  int64 dtime = 7;
+
+  // Changed time
+  int64 ctime = 8;
+
+  // Memory segment permissions
+  string permissions = 9;
+
+  // Size in bytes
+  int64 size = 10;
+
+  // Number of attached processes
+  int32 attached = 11;
+
+  // Destination/attach status
+  string status = 12;
+
+  // 1 if segment is locked else 0
+  int32 locked = 13;
+}

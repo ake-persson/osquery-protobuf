@@ -1,0 +1,27 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Apple's system management controller keys.
+message SmcKey {
+
+  // 4-character key
+  string key = 1;
+
+  // SMC-reported type literal type
+  string type = 2;
+
+  // Reported size of data in bytes
+  int32 size = 3;
+
+  // A type-encoded representation of the key value
+  string value = 4;
+
+  // 1 if this key is normally hidden
+  int32 hidden = 5;
+}

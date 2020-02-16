@@ -1,0 +1,21 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Track active SELinux settings.
+message SelinuxSetting {
+
+  // Where the key is located inside the SELinuxFS mount point.
+  string scope = 1;
+
+  // Key or class name.
+  string key = 2;
+
+  // Active value.
+  string value = 3;
+}

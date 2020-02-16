@@ -1,0 +1,48 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Processes which have open network sockets on the system.
+message ProcessOpenSocket {
+
+  // Process (or thread) ID
+  int32 pid = 1;
+
+  // Socket file descriptor number
+  int64 fd = 2;
+
+  // Socket handle or inode number
+  int64 socket = 3;
+
+  // Network protocol (IPv4
+  int32 family = 4;
+
+  // Transport protocol (TCP/UDP)
+  int32 protocol = 5;
+
+  // Socket local address
+  string local_address = 6;
+
+  // Socket remote address
+  string remote_address = 7;
+
+  // Socket local port
+  int32 local_port = 8;
+
+  // Socket remote port
+  int32 remote_port = 9;
+
+  // For UNIX sockets (family=AF_UNIX)
+  string path = 10;
+
+  // TCP socket state
+  string state = 11;
+
+  // The inode number of the network namespace
+  string net_namespace = 12;
+}

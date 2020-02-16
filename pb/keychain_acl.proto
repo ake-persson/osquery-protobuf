@@ -1,0 +1,27 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Applications that have ACL entries in the keychain.
+message KeychainAcl {
+
+  // The path of the keychain
+  string keychain_path = 1;
+
+  // A space delimited set of authorization attributes
+  string authorizations = 2;
+
+  // The path of the authorized application
+  string path = 3;
+
+  // The description included with the ACL entry
+  string description = 4;
+
+  // An optional label tag that may be included with the keychain entry
+  string label = 5;
+}

@@ -1,0 +1,30 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Enumeration of registered Windows security products.
+message WindowsSecurityProduct {
+
+  // Type of security product
+  string type = 1;
+
+  // Name of product
+  string name = 2;
+
+  // State of protection
+  string state = 3;
+
+  // Timestamp for the product state
+  string state_timestamp = 4;
+
+  // Remediation path
+  string remediation_path = 5;
+
+  // 1 if product signatures are up to date
+  int32 signatures_up_to_date = 6;
+}

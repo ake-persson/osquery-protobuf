@@ -1,0 +1,18 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Local system user group relationships.
+message UserGroup {
+
+  // User ID
+  int64 uid = 1;
+
+  // Group ID
+  int64 gid = 2;
+}

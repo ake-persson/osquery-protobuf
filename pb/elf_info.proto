@@ -1,0 +1,39 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// ELF file information.
+message ElfInfo {
+
+  // Class type
+  string class = 1;
+
+  // Section type
+  string abi = 2;
+
+  // Section virtual address in memory
+  int32 abi_version = 3;
+
+  // Offset of section in file
+  string type = 4;
+
+  // Machine type
+  int32 machine = 5;
+
+  // Object file version
+  int32 version = 6;
+
+  // Entry point address
+  int64 entry = 7;
+
+  // ELF header flags
+  int32 flags = 8;
+
+  // Path to ELF file
+  string path = 9;
+}

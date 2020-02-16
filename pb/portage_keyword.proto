@@ -1,0 +1,27 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// A summary about portage configurations like keywords, mask and unmask.
+message PortageKeyword {
+
+  // Package name
+  string package = 1;
+
+  // The version which are affected by the use flags
+  string version = 2;
+
+  // The keyword applied to the package
+  string keyword = 3;
+
+  // If the package is masked
+  int32 mask = 4;
+
+  // If the package is unmasked
+  int32 unmask = 5;
+}

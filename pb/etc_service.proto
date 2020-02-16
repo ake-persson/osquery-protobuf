@@ -1,0 +1,27 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Line-parsed /etc/services.
+message EtcService {
+
+  // Service name
+  string name = 1;
+
+  // Service port number
+  int32 port = 2;
+
+  // Transport protocol (TCP/UDP)
+  string protocol = 3;
+
+  // Optional space separated list of other names for a service
+  string aliases = 4;
+
+  // Optional comment for a service.
+  string comment = 5;
+}

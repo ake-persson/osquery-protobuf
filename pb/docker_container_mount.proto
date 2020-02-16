@@ -1,0 +1,39 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Docker container mounts.
+message DockerContainerMount {
+
+  // Container ID
+  string id = 1;
+
+  // Type of mount (bind
+  string type = 2;
+
+  // Optional mount name
+  string name = 3;
+
+  // Source path on host
+  string source = 4;
+
+  // Destination path inside container
+  string destination = 5;
+
+  // Driver providing the mount
+  string driver = 6;
+
+  // Mount options (rw
+  string mode = 7;
+
+  // 1 if read/write. 0 otherwise
+  int32 rw = 8;
+
+  // Mount propagation
+  string propagation = 9;
+}

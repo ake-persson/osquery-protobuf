@@ -1,0 +1,17 @@
+{{define "schema"}}
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+{{if .HasTimestamp}}import "google/protobuf/timestamp.proto";{{end}}
+
+// {{.Descr}}
+message {{.PbNameSg}} {
+{{range $v := .Columns}}
+  // {{$v.Descr}}
+  {{$v.PbType}} {{$v.Name}} = {{$v.PbOrder}};
+{{end -}}
+}
+{{end}}

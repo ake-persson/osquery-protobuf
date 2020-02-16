@@ -1,0 +1,33 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Docker networks information.
+message DockerNetwork {
+
+  // Network ID
+  string id = 1;
+
+  // Network name
+  string name = 2;
+
+  // Network driver
+  string driver = 3;
+
+  // Time of creation as UNIX time
+  int64 created = 4;
+
+  // 1 if IPv6 is enabled on this network. 0 otherwise
+  int32 enable_ipv6 = 5;
+
+  // Network subnet
+  string subnet = 6;
+
+  // Network gateway
+  string gateway = 7;
+}

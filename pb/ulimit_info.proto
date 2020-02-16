@@ -1,0 +1,21 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// System resource usage limits.
+message UlimitInfo {
+
+  // System resource to be limited
+  string type = 1;
+
+  // Current limit value
+  string soft_limit = 2;
+
+  // Maximum limit value
+  string hard_limit = 3;
+}

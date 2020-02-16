@@ -1,0 +1,15 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Track user interaction events from macOS' event tapping framework.
+message UserInteractionEvent {
+
+  // Time
+  int64 time = 1;
+}

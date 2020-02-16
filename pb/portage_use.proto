@@ -1,0 +1,21 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// List of enabled portage USE values for specific package.
+message PortageUse {
+
+  // Package name
+  string package = 1;
+
+  // The version of the installed package
+  string version = 2;
+
+  // USE flag which has been enabled for package
+  string use = 3;
+}

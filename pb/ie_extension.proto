@@ -1,0 +1,24 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Internet Explorer browser extensions.
+message IeExtension {
+
+  // Extension display name
+  string name = 1;
+
+  // Extension identifier
+  string registry_path = 2;
+
+  // Version of the executable
+  string version = 3;
+
+  // Path to executable
+  string path = 4;
+}

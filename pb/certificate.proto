@@ -1,0 +1,75 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+import "google/protobuf/timestamp.proto";
+
+// Certificate Authorities installed in Keychains/ca-bundles.
+message Certificate {
+
+  // Certificate CommonName
+  string common_name = 1;
+
+  // Certificate distinguished name
+  string subject = 2;
+
+  // Certificate issuer distinguished name
+  string issuer = 3;
+
+  // 1 if CA: true (certificate is an authority) else 0
+  int32 ca = 4;
+
+  // 1 if self-signed
+  int32 self_signed = 5;
+
+  // Lower bound of valid date
+  google.protobuf.Timestamp not_valid_before = 6;
+
+  // Certificate expiration data
+  google.protobuf.Timestamp not_valid_after = 7;
+
+  // Signing algorithm used
+  string signing_algorithm = 8;
+
+  // Key algorithm used
+  string key_algorithm = 9;
+
+  // Key size used for RSA/DSA
+  string key_strength = 10;
+
+  // Certificate key usage and extended key usage
+  string key_usage = 11;
+
+  // SKID an optionally included SHA1
+  string subject_key_id = 12;
+
+  // AKID an optionally included SHA1
+  string authority_key_id = 13;
+
+  // SHA1 hash of the raw certificate contents
+  string sha1 = 14;
+
+  // Path to Keychain or PEM bundle
+  string path = 15;
+
+  // Certificate serial number
+  string serial = 16;
+
+  // SID
+  string sid = 17;
+
+  // Certificate system store location
+  string store_location = 18;
+
+  // Certificate system store
+  string store = 19;
+
+  // Username
+  string username = 20;
+
+  // Exists for service/user stores. Contains raw store id provided by WinAPI.
+  string store_id = 21;
+}

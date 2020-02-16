@@ -1,0 +1,18 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Returns the private keys in the users ~/.ssh directory and whether or not they are encrypted.
+message UserSshKey {
+
+  // Path to key file
+  string path = 1;
+
+  // 1 if key is encrypted
+  int32 encrypted = 2;
+}

@@ -1,0 +1,39 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Represents products as they are installed by Windows Installer. A product generally correlates to one installation package on Windows. Some fields may be blank as Windows installation details are left to the discretion of the product author.
+message Program {
+
+  // Commonly used product name.
+  string name = 1;
+
+  // Product version information.
+  string version = 2;
+
+  // The installation location directory of the product.
+  string install_location = 3;
+
+  // The installation source of the product.
+  string install_source = 4;
+
+  // The language of the product.
+  string language = 5;
+
+  // Name of the product supplier.
+  string publisher = 6;
+
+  // Path and filename of the uninstaller.
+  string uninstall_string = 7;
+
+  // Date that this product was installed on the system. 
+  string install_date = 8;
+
+  // Product identification such as a serial number on software
+  string identifying_number = 9;
+}

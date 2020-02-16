@@ -1,0 +1,30 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// OS X's kernel extensions, both loaded and within the load search path.
+message KernelExtension {
+
+  // Extension load tag or index
+  int32 idx = 1;
+
+  // Reference count
+  int32 refs = 2;
+
+  // Bytes of wired memory used by extension
+  int64 size = 3;
+
+  // Extension label
+  string name = 4;
+
+  // Extension version
+  string version = 5;
+
+  // Optional path to extension bundle
+  string path = 6;
+}

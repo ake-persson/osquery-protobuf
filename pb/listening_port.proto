@@ -1,0 +1,39 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Processes with listening (bound) network sockets/ports.
+message ListeningPort {
+
+  // Process (or thread) ID
+  int32 pid = 1;
+
+  // Transport layer port
+  int32 port = 2;
+
+  // Transport protocol (TCP/UDP)
+  int32 protocol = 3;
+
+  // Network protocol (IPv4
+  int32 family = 4;
+
+  // Specific address for bind
+  string address = 5;
+
+  // Socket file descriptor number
+  int64 fd = 6;
+
+  // Socket handle or inode number
+  int64 socket = 7;
+
+  // Path for UNIX domain sockets
+  string path = 8;
+
+  // The inode number of the network namespace
+  string net_namespace = 9;
+}

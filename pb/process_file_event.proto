@@ -1,0 +1,57 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// A File Integrity Monitor implementation using the audit service.
+message ProcessFileEvent {
+
+  // Operation type
+  string operation = 1;
+
+  // Process ID
+  int64 pid = 2;
+
+  // Parent process ID
+  int64 ppid = 3;
+
+  // Time of execution in UNIX time
+  int64 time = 4;
+
+  // The executable path
+  string executable = 5;
+
+  // True if this is a partial event (i.e.: this process existed before we started osquery)
+  string partial = 6;
+
+  // The current working directory of the process
+  string cwd = 7;
+
+  // The path associated with the event
+  string path = 8;
+
+  // The canonical path associated with the event
+  string dest_path = 9;
+
+  // The uid of the process performing the action
+  string uid = 10;
+
+  // The gid of the process performing the action
+  string gid = 11;
+
+  // Effective user ID of the process using the file
+  string euid = 12;
+
+  // Effective group ID of the process using the file
+  string egid = 13;
+
+  // Time of execution in system uptime
+  int64 uptime = 14;
+
+  // Event ID
+  string eid = 15;
+}

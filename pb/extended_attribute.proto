@@ -1,0 +1,27 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Returns the extended attributes for files (similar to Windows ADS).
+message ExtendedAttribute {
+
+  // Absolute file path
+  string path = 1;
+
+  // Directory of file(s)
+  string directory = 2;
+
+  // Name of the value generated from the extended attribute
+  string key = 3;
+
+  // The parsed information from the attribute
+  string value = 4;
+
+  // 1 if the value is base64 encoded else 0
+  int32 base64 = 5;
+}

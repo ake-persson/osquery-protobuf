@@ -1,0 +1,27 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Returns information about installed event taps.
+message EventTap {
+
+  // Is the Event Tap enabled
+  int32 enabled = 1;
+
+  // Unique ID for the Tap
+  int32 event_tap_id = 2;
+
+  // The mask that identifies the set of events to be observed.
+  string event_tapped = 3;
+
+  // The process ID of the target application
+  int32 process_being_tapped = 4;
+
+  // The process ID of the application that created the event tap.
+  int32 tapping_process = 5;
+}

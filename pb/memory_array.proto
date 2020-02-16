@@ -1,0 +1,27 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Data associated with collection of memory devices that operate to form a memory address.
+message MemoryArray {
+
+  // Handle
+  string handle = 1;
+
+  // Physical location of the memory array
+  string location = 2;
+
+  // Function for which the array is used
+  string use = 3;
+
+  // Maximum capacity of array in gigabytes
+  int32 max_capacity = 4;
+
+  // Number of memory devices on array
+  int32 number_memory_devices = 5;
+}

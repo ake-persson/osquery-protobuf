@@ -1,0 +1,27 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// List the osquery registry plugins.
+message OsqueryRegistry {
+
+  // Name of the osquery registry
+  string registry = 1;
+
+  // Name of the plugin item
+  string name = 2;
+
+  // Extension route UUID (0 for core)
+  int32 owner_uuid = 3;
+
+  // 1 If the plugin is internal else 0
+  int32 internal = 4;
+
+  // 1 If this plugin is active else 0
+  int32 active = 5;
+}

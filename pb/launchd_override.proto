@@ -1,0 +1,27 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Override keys, per user, for LaunchDaemons and Agents.
+message LaunchdOverride {
+
+  // Daemon or agent service name
+  string label = 1;
+
+  // Name of the override key
+  string key = 2;
+
+  // Overridden value
+  string value = 3;
+
+  // User ID applied to the override
+  int64 uid = 4;
+
+  // Path to daemon or agent plist
+  string path = 5;
+}

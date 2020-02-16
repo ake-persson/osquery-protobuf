@@ -1,0 +1,42 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// A single row containing the operating system name and version.
+message OsVersion {
+
+  // Distribution or product name
+  string name = 1;
+
+  // Pretty
+  string version = 2;
+
+  // Major release version
+  int32 major = 3;
+
+  // Minor release version
+  int32 minor = 4;
+
+  // Optional patch release
+  int32 patch = 5;
+
+  // Optional build-specific or variant string
+  string build = 6;
+
+  // OS Platform or ID
+  string platform = 7;
+
+  // Closely related platforms
+  string platform_like = 8;
+
+  // OS version codename
+  string codename = 9;
+
+  // The install date of the OS.
+  string install_date = 10;
+}

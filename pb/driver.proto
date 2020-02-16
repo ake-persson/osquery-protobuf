@@ -1,0 +1,54 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Details for in-use Windows device drivers. This does not display installed but unused drivers.
+message Driver {
+
+  // Device ID
+  string device_id = 1;
+
+  // Device name
+  string device_name = 2;
+
+  // Path to driver image file
+  string image = 3;
+
+  // Driver description
+  string description = 4;
+
+  // Driver service name
+  string service = 5;
+
+  // Driver service registry key
+  string service_key = 6;
+
+  // Driver version
+  string version = 7;
+
+  // Associated inf file
+  string inf = 8;
+
+  // Device/driver class name
+  string class = 9;
+
+  // Driver provider
+  string provider = 10;
+
+  // Device manufacturer
+  string manufacturer = 11;
+
+  // Driver key
+  string driver_key = 12;
+
+  // Driver date
+  int64 date = 13;
+
+  // Whether the driver is signed or not
+  int32 signed = 14;
+}

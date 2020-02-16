@@ -1,0 +1,15 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Intel ME/CSE Info.
+message IntelMeInfo {
+
+  // Intel ME version
+  string version = 1;
+}

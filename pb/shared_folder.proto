@@ -1,0 +1,18 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Folders available to others via SMB or AFP.
+message SharedFolder {
+
+  // The shared name of the folder as it appears to other users
+  string name = 1;
+
+  // Absolute path of shared folder on the local system
+  string path = 2;
+}
