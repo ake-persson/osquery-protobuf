@@ -26,8 +26,15 @@ var pbTypes = map[string]string{
 
 // TODO: Read from a file.
 var pbExceptions = map[string]string{
-	"User.uid": "uint64",
-	"User.gid": "uint64",
+	"User.uid":     "uint64",
+	"User.gid":     "uint64",
+	"Group.gid":    "uint64",
+	"Process.uid":  "uint64",
+	"Process.gid":  "uint64",
+	"Process.euid": "uint64",
+	"Process.egid": "uint64",
+	"Process.suid": "uint64",
+	"Process.sgid": "uint64",
 }
 
 type Service struct {

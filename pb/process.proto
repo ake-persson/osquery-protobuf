@@ -32,22 +32,22 @@ message Process {
   string root = 7;
 
   // Unsigned user ID
-  int64 uid = 8;
+  uint64 uid = 8;
 
   // Unsigned group ID
-  int64 gid = 9;
+  uint64 gid = 9;
 
   // Unsigned effective user ID
-  int64 euid = 10;
+  uint64 euid = 10;
 
   // Unsigned effective group ID
-  int64 egid = 11;
+  uint64 egid = 11;
 
   // Unsigned saved user ID
-  int64 suid = 12;
+  uint64 suid = 12;
 
   // Unsigned saved group ID
-  int64 sgid = 13;
+  uint64 sgid = 13;
 
   // Bytes of unpagable memory used by process
   int64 wired_size = 14;

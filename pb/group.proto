@@ -11,7 +11,7 @@ option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 message Group {
 
   // Unsigned int64 group ID
-  int64 gid = 1;
+  uint64 gid = 1;
 
   // A signed int64 version of gid
   int64 gid_signed = 2;
