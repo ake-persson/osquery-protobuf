@@ -11,10 +11,10 @@ option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 message User {
 
   // User ID
-  int64 uid = 1;
+  uint64 uid = 1;
 
   // Group ID (unsigned)
-  int64 gid = 2;
+  uint64 gid = 2;
 
   // User ID as int64 signed (Apple)
   int64 uid_signed = 3;

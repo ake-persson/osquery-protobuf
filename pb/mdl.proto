@@ -1,0 +1,24 @@
+
+syntax = "proto3";
+
+package schemas;
+
+option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
+
+
+
+// Query file metadata in the Spotlight database.
+message Mdl {
+
+  // Path of the file
+  string path = 1;
+
+  // Name of the metadata key
+  string key = 2;
+
+  // Value stored in the metadata key
+  string value = 3;
+
+  // CoreFoundation type of data stored in value
+  string valuetype = 4;
+}

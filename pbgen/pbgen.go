@@ -24,6 +24,12 @@ var pbTypes = map[string]string{
 	"DATETIME": "google.protobuf.Timestamp",
 }
 
+// TODO: Read from a file.
+var pbExceptions = map[string]string{
+	"User.uid": "uint64",
+	"User.gid": "uint64",
+}
+
 type Service struct {
 	Tables []*Table
 }
@@ -84,13 +90,16 @@ func (s *Service) parseFile(file string, dst string, templ *template.Template) e
 			}
 			order++
 
-			if v, ok := pbTypes[c.Type]; ok {
+			if v, ok := pbExceptions[t.PbNameSg+"."+c.Name]; ok {
 				c.PbType = v
-				if c.PbType == "google.protobuf.Timestamp" {
-					t.HasTimestamp = true
-				}
+			} else if v, ok := pbTypes[c.Type]; ok {
+				c.PbType = v
 			} else {
 				return fmt.Errorf("unknown column type: %s", c.Type)
+			}
+
+			if c.PbType == "google.protobuf.Timestamp" {
+				t.HasTimestamp = true
 			}
 
 			t.Columns = append(t.Columns, &c)
