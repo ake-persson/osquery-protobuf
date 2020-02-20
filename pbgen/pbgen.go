@@ -16,6 +16,7 @@ import (
 	"github.com/mitchellh/go-homedir"
 )
 
+// TODO: Read from a file.
 var pbTypes = map[string]string{
 	"BIGINT":   "int64",
 	"INTEGER":  "int32",
@@ -36,6 +37,9 @@ var pbExceptions = map[string]string{
 	"Process.suid": "uint64",
 	"Process.sgid": "uint64",
 }
+
+// TODO: Read from a file.
+var sgExceptions = map[string]string{}
 
 type Service struct {
 	Tables []*Table

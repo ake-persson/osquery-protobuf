@@ -1,0 +1,28 @@
+# Not in use yet
+
+# Source and destionation.
+src: src/github.com/osquery/osquery/specs
+dst: src/github.com/mickep76/osquery-protobuf
+
+# Plural to singular exceptions <plural word>: <singular word>
+SingularExceptions:
+
+# Types <column type>: <protobuf type>.
+Types:
+    BIGINT: int64
+    INTEGER: int32
+    TEXT: string
+    DOUBLE: double
+    DATETIME: google.protobuf.Timestamp
+
+# Type exceptions <message>.<field>: <type>.
+TypeExceptions:
+    User.uid: uint64
+    User.gid: uint64
+    Group.gid: uint64
+    Process.uid: uint64
+    Process.gid: uint64
+    Process.euid: uint64
+    Process.egid: uint64
+    Process.suid: uint64
+    Process.sgid: uint64
