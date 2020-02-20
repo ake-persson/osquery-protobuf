@@ -1,42 +1,29 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Scan for nearby WiFi networks.
 message WifiSurvey {
-
   // Name of the interface
   string interface = 1;
-
   // SSID octets of the network
   string ssid = 2;
-
   // The current basic service set identifier
   string bssid = 3;
-
   // Name of the network
   string network_name = 4;
-
   // The country code (ISO/IEC 3166-1:1997) for the network
   string country_code = 5;
-
   // The current received signal strength indication (dbm)
   int32 rssi = 6;
-
   // The current noise measurement (dBm)
   int32 noise = 7;
-
   // Channel number
   int32 channel = 8;
-
   // Channel width
   int32 channel_width = 9;
-
   // Channel band
   int32 channel_band = 10;
 }

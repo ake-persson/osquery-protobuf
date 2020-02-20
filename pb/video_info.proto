@@ -1,36 +1,25 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Retrieve video card information of the machine.
 message VideoInfo {
-
   // The amount of bits per pixel to represent color.
   int32 color_depth = 1;
-
   // The driver of the device.
   string driver = 2;
-
   // The date listed on the installed driver.
   string driver_date = 3;
-
   // The version of the installed driver.
   string driver_version = 4;
-
   // The manufaturer of the gpu.
   string manufacturer = 5;
-
   // The model of the gpu.
   string model = 6;
-
   // The series of the gpu.
   string series = 7;
-
   // The current resolution of the display.
   string video_mode = 8;
 }

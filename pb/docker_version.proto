@@ -1,39 +1,27 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Docker version information.
 message DockerVersion {
-
   // Docker version
   string version = 1;
-
   // API version
   string api_version = 2;
-
   // Minimum API version supported
   string min_api_version = 3;
-
   // Docker build git commit
   string git_commit = 4;
-
   // Go version
   string go_version = 5;
-
   // Operating system
   string os = 6;
-
   // Hardware architecture
   string arch = 7;
-
   // Kernel version
   string kernel_version = 8;
-
   // Build time
   string build_time = 9;
 }

@@ -1,39 +1,27 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Retrieve bitlocker status of the machine.
 message BitlockerInfo {
-
   // ID of the encrypted drive.
   string device_id = 1;
-
   // Drive letter of the encrypted drive.
   string drive_letter = 2;
-
   // Persistent ID of the drive.
   string persistent_volume_id = 3;
-
   // The bitlocker conversion status of the drive.
   int32 conversion_status = 4;
-
   // The bitlocker protection status of the drive.
   int32 protection_status = 5;
-
   // The encryption type of the device.
   string encryption_method = 6;
-
   // The FVE metadata version of the drive.
   int32 version = 7;
-
   // The percentage of the drive that is encrypted.
   int32 percentage_encrypted = 8;
-
   // The accessibility status of the drive from Windows.
   int32 lock_status = 9;
 }

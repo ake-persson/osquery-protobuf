@@ -1,36 +1,25 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Current list of APT repositories or software channels.
 message AptSource {
-
   // Repository name
   string name = 1;
-
   // Source file
   string source = 2;
-
   // Repository base URI
   string base_uri = 3;
-
   // Release name
   string release = 4;
-
   // Repository source version
   string version = 5;
-
   // Repository maintainer
   string maintainer = 6;
-
   // Repository components
   string components = 7;
-
   // Repository architectures
   string architectures = 8;
 }

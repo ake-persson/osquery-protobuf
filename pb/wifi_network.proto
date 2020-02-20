@@ -1,48 +1,33 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // OS X known/remembered Wi-Fi networks list.
 message WifiNetwork {
-
   // SSID octets of the network
   string ssid = 1;
-
   // Name of the network
   string network_name = 2;
-
   // Type of security on this network
   string security_type = 3;
-
   // Last time this netword was connected to as a unix_time
   int32 last_connected = 4;
-
   // 1 if Passpoint is supported
   int32 passpoint = 5;
-
   // 1 if network is possibly a hidden network
   int32 possibly_hidden = 6;
-
   // 1 if roaming is supported
   int32 roaming = 7;
-
   // Describe the roaming profile
   string roaming_profile = 8;
-
   // 1 if this network has a captive portal
   int32 captive_portal = 9;
-
   // 1 if auto login is enabled
   int32 auto_login = 10;
-
   // 1 if this network is temporarily disabled
   int32 temporarily_disabled = 11;
-
   // 1 if this network is disabled
   int32 disabled = 12;
 }

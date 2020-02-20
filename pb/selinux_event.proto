@@ -1,27 +1,19 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Track SELinux events.
 message SelinuxEvent {
-
   // Event type
   string type = 1;
-
   // Message
   string message = 2;
-
   // Time of execution in UNIX time
   int64 time = 3;
-
   // Time of execution in system uptime
   int64 uptime = 4;
-
   // Event ID
   string eid = 5;
 }

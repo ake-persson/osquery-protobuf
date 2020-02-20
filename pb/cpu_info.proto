@@ -1,48 +1,33 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Retrieve cpu hardware info of the machine.
 message CpuInfo {
-
   // The DeviceID of the CPU.
   string device_id = 1;
-
   // The model of the CPU.
   string model = 2;
-
   // The manufacturer of the CPU.
   string manufacturer = 3;
-
   // The processor type
   string processor_type = 4;
-
   // The availability and status of the CPU.
   string availability = 5;
-
   // The current operating status of the CPU.
   int32 cpu_status = 6;
-
   // The number of cores of the CPU.
   string number_of_cores = 7;
-
   // The number of logical processors of the CPU.
   int32 logical_processors = 8;
-
   // The width of the CPU address bus.
   string address_width = 9;
-
   // The current frequency of the CPU.
   int32 current_clock_speed = 10;
-
   // The maximum possible frequency of the CPU.
   int32 max_clock_speed = 11;
-
   // The assigned socket on the board for the given CPU.
   string socket_designation = 12;
 }

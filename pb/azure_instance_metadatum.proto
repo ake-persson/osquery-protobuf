@@ -1,60 +1,41 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Azure instance metadata.
 message AzureInstanceMetadatum {
-
   // Azure Region the VM is running in
   string location = 1;
-
   // Name of the VM
   string name = 2;
-
   // Offer information for the VM image (Azure image gallery VMs only)
   string offer = 3;
-
   // Publisher of the VM image
   string publisher = 4;
-
   // SKU for the VM image
   string sku = 5;
-
   // Version of the VM image
   string version = 6;
-
   // Linux or Windows
   string os_type = 7;
-
   // Update domain the VM is running in
   string platform_update_domain = 8;
-
   // Fault domain the VM is running in
   string platform_fault_domain = 9;
-
   // Unique identifier for the VM
   string vm_id = 10;
-
   // VM size
   string vm_size = 11;
-
   // Azure subscription for the VM
   string subscription_id = 12;
-
   // Resource group for the VM
   string resource_group_name = 13;
-
   // Placement group for the VM scale set
   string placement_group_id = 14;
-
   // VM scale set name
   string vm_scale_set_name = 15;
-
   // Availability zone of the VM
   string zone = 16;
 }

@@ -1,30 +1,21 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // OS X package receipt details.
 message PackageReceipt {
-
   // Package domain identifier
   string package_id = 1;
-
   // Installed package version
   string version = 2;
-
   // Optional relative install path on volume
   string location = 3;
-
   // Timestamp of install time
   double install_time = 4;
-
   // Name of installer process
   string installer_name = 5;
-
   // Path of receipt plist
   string path = 6;
 }

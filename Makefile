@@ -8,7 +8,7 @@ pbgen: clean
 	pbgen/pbgen
 
 fmt: pbgen
-	for f in $$(find api/v1 -type f); do \
+	for f in $$(find pb -type f); do \
 		prototool format -w $$f; \
 	done
 

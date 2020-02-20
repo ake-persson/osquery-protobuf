@@ -1,78 +1,53 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Darwin Virtual Memory statistics.
 message VirtualMemoryInfo {
-
   // Total number of free pages.
   int64 free = 1;
-
   // Total number of active pages.
   int64 active = 2;
-
   // Total number of inactive pages.
   int64 inactive = 3;
-
   // Total number of speculative pages.
   int64 speculative = 4;
-
   // Total number of throttled pages.
   int64 throttled = 5;
-
   // Total number of wired down pages.
   int64 wired = 6;
-
   // Total number of purgeable pages.
   int64 purgeable = 7;
-
   // Total number of calls to vm_faults.
   int64 faults = 8;
-
   // Total number of copy-on-write pages.
   int64 copy = 9;
-
   // Total number of zero filled pages.
   int64 zero_fill = 10;
-
   // Total number of reactivated pages.
   int64 reactivated = 11;
-
   // Total number of purged pages.
   int64 purged = 12;
-
   // Total number of file backed pages.
   int64 file_backed = 13;
-
   // Total number of anonymous pages.
   int64 anonymous = 14;
-
   // Total number of uncompressed pages.
   int64 uncompressed = 15;
-
   // The number of pages used to store compressed VM pages.
   int64 compressor = 16;
-
   // The total number of pages that have been decompressed by the VM compressor.
   int64 decompressed = 17;
-
   // The total number of pages that have been compressed by the VM compressor.
   int64 compressed = 18;
-
   // The total number of requests for pages from a pager.
   int64 page_ins = 19;
-
   // Total number of pages paged out.
   int64 page_outs = 20;
-
   // The total number of compressed pages that have been swapped out to disk.
   int64 swap_ins = 21;
-
   // The total number of compressed pages that have been swapped back in from disk.
   int64 swap_outs = 22;
 }

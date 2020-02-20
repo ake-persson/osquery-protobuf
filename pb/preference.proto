@@ -1,27 +1,19 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // OS X defaults and managed preferences.
 message Preference {
-
   // Preference top-level key
   string key = 1;
-
   // Intemediate key path
   string subkey = 2;
-
   // String value of most CF types
   string value = 3;
-
   // 1 if the value is forced/managed
   int32 forced = 4;
-
   // (optional
   string username = 5;
 }

@@ -1,24 +1,17 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Docker volumes information.
 message DockerVolume {
-
   // Volume name
   string name = 1;
-
   // Volume driver
   string driver = 2;
-
   // Mount point
   string mount_point = 3;
-
   // Volume type
   string type = 4;
 }

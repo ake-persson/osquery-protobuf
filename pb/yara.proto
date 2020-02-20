@@ -1,24 +1,17 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Track YARA matches for files or PIDs.
 message Yara {
-
   // List of YARA matches
   string matches = 1;
-
   // Number of YARA matches
   int32 count = 2;
-
   // Matching strings
   string strings = 3;
-
   // Matching tags
   string tags = 4;
 }

@@ -1,39 +1,27 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Safari browser extension details for all users.
 message SafariExtension {
-
   // Extension display name
   string name = 1;
-
   // Extension identifier
   string identifier = 2;
-
   // Extension long version
   string version = 3;
-
   // Bundle SDK used to compile extension
   string sdk = 4;
-
   // Extension-supplied update URI
   string update_url = 5;
-
   // Optional extension author
   string author = 6;
-
   // Optional developer identifier
   string developer_id = 7;
-
   // Optional extension description text
   string description = 8;
-
   // Path to extension XAR bundle
   string path = 9;
 }

@@ -1,24 +1,17 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Address resolution cache, both static and dynamic (from ARP, NDP).
 message ArpCache {
-
   // IPv4 address target
   string address = 1;
-
   // MAC address of broadcasted address
   string mac = 2;
-
   // Interface of the network for the MAC
   string interface = 3;
-
   // 1 for true
   string permanent = 4;
 }

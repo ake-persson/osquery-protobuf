@@ -1,27 +1,19 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Track active AppArmor profiles.
 message ApparmorProfile {
-
   // Unique
   string path = 1;
-
   // Policy name.
   string name = 2;
-
   // Which executable(s) a profile will attach to.
   string attach = 3;
-
   // How the policy is applied.
   string mode = 4;
-
   // A unique hash that identifies this policy.
   string sha1 = 5;
 }

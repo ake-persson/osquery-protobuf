@@ -1,33 +1,23 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // sysctl names, values, and settings information.
 message SystemControl {
-
   // Full sysctl MIB name
   string name = 1;
-
   // Control MIB
   string oid = 2;
-
   // Subsystem ID
   string subsystem = 3;
-
   // Value of setting
   string current_value = 4;
-
   // The MIB value set in /etc/sysctl.conf
   string config_value = 5;
-
   // Data type
   string type = 6;
-
   // Specific attribute of opaque type
   string field_name = 7;
 }

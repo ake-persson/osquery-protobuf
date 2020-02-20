@@ -1,33 +1,23 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Forensic Carves.
 message Carf {
-
   // Time at which the carve was kicked off
   int64 time = 1;
-
   // A SHA256 sum of the carved archive
   string sha256 = 2;
-
   // Size of the carved archive
   int32 size = 3;
-
   // The path of the requested carve
   string path = 4;
-
   // Status of the carve
   string status = 5;
-
   // Identifying value of the carve session
   string carve_guid = 6;
-
   // Set this value to '1' to start a file carve
   int32 carve = 7;
 }

@@ -1,39 +1,27 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // RPM packages that are currently installed on the host system.
 message RpmPackage {
-
   // RPM package name
   string name = 1;
-
   // Package version
   string version = 2;
-
   // Package release
   string release = 3;
-
   // Source RPM package name (optional)
   string source = 4;
-
   // Package size in bytes
   int64 size = 5;
-
   // SHA1 hash of the package contents
   string sha1 = 6;
-
   // Architecture(s) supported
   string arch = 7;
-
   // Package epoch value
   int32 epoch = 8;
-
   // When the package was installed
   int32 install_time = 9;
 }

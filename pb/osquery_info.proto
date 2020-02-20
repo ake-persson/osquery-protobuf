@@ -1,48 +1,33 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Top level information about the running version of osquery.
 message OsqueryInfo {
-
   // Process (or thread/handle) ID
   int32 pid = 1;
-
   // Unique ID provided by the system
   string uuid = 2;
-
   // Unique
   string instance_id = 3;
-
   // osquery toolkit version
   string version = 4;
-
   // Hash of the working configuration state
   string config_hash = 5;
-
   // 1 if the config was loaded and considered valid
   int32 config_valid = 6;
-
   // osquery extensions status
   string extensions = 7;
-
   // osquery toolkit build platform
   string build_platform = 8;
-
   // osquery toolkit platform distribution name (os version)
   string build_distro = 9;
-
   // UNIX time in seconds when the process started
   int32 start_time = 10;
-
   // Process (or thread/handle) ID of optional watcher process
   int32 watcher = 11;
-
   // The osquery platform bitmask
   int32 platform_mask = 12;
 }

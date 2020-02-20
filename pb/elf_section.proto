@@ -1,39 +1,27 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // ELF section information.
 message ElfSection {
-
   // Section name
   string name = 1;
-
   // Section type
   int32 type = 2;
-
   // Section virtual address in memory
   int32 vaddr = 3;
-
   // Offset of section in file
   int32 offset = 4;
-
   // Size of section
   int32 size = 5;
-
   // Section attributes
   string flags = 6;
-
   // Link to other section
   string link = 7;
-
   // Segment alignment
   int32 align = 8;
-
   // Path to ELF file
   string path = 9;
 }

@@ -1,24 +1,17 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Read and parse a plist file.
 message Plist {
-
   // Preference top-level key
   string key = 1;
-
   // Intermediate key path
   string subkey = 2;
-
   // String value of most CF types
   string value = 3;
-
   // (required
   string path = 4;
 }

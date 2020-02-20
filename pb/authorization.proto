@@ -1,45 +1,31 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // OS X Authorization rights database.
 message Authorization {
-
   // Label top-level key
   string modified = 1;
-
   // Label top-level key
   string allow_root = 2;
-
   // Label top-level key
   string timeout = 3;
-
   // Label top-level key
   string version = 4;
-
   // Label top-level key
   string tries = 5;
-
   // Label top-level key
   string authenticate_user = 6;
-
   // Label top-level key
   string shared = 7;
-
   // Label top-level key
   string comment = 8;
-
   // Label top-level key
   string created = 9;
-
   // Label top-level key
   string class = 10;
-
   // Label top-level key
   string session_owner = 11;
 }

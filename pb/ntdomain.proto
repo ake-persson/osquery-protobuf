@@ -1,36 +1,25 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Display basic NT domain information of a Windows machine.
 message Ntdomain {
-
   // The label by which the object is known.
   string name = 1;
-
   // The name of the site where the domain controller is configured.
   string client_site_name = 2;
-
   // The name of the site where the domain controller is located.
   string dc_site_name = 3;
-
   // The name of the root of the DNS tree.
   string dns_forest_name = 4;
-
   // The IP Address of the discovered domain controller..
   string domain_controller_address = 5;
-
   // The name of the discovered domain controller.
   string domain_controller_name = 6;
-
   // The name of the domain.
   string domain_name = 7;
-
   // The current status of the domain object.
   string status = 8;
 }

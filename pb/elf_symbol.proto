@@ -1,36 +1,25 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // ELF symbol list.
 message ElfSymbol {
-
   // Symbol name
   string name = 1;
-
   // Symbol address (value)
   int32 addr = 2;
-
   // Size of object
   int32 size = 3;
-
   // Symbol type
   string type = 4;
-
   // Binding type
   string binding = 5;
-
   // Section table index
   int32 offset = 6;
-
   // Table name containing symbol
   string table = 7;
-
   // Path to ELF file
   string path = 8;
 }

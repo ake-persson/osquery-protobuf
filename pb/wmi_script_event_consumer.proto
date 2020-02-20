@@ -1,30 +1,21 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // WMI ActiveScriptEventConsumer, which can be used for persistence on Windows. See https://www.blackhat.com/docs/us-15/materials/us-15-Graeber-Abusing-Windows-Management-Instrumentation-WMI-To-Build-A-Persistent%20Asynchronous-And-Fileless-Backdoor-wp.pdf for more details.
 message WmiScriptEventConsumer {
-
-  // Unique identifier for the event consumer. 
+  // Unique identifier for the event consumer.
   string name = 1;
-
   // Name of the scripting engine to use
   string scripting_engine = 2;
-
   // Name of the file from which the script text is read
   string script_file_name = 3;
-
   // Text of the script that is expressed in a language known to the scripting engine. This property must be NULL if the ScriptFileName property is not NULL.
   string script_text = 4;
-
   // The name of the class.
   string class = 5;
-
   // Relative path to the class or instance.
   string relative_path = 6;
 }

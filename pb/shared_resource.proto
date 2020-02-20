@@ -1,36 +1,25 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Displays shared resources on a computer system running Windows. This may be a disk drive, printer, interprocess communication, or other sharable device.
 message SharedResource {
-
   // A textual description of the object
   string description = 1;
-
   // Indicates when the object was installed. Lack of a value does not indicate that the object is not installed.
   string install_date = 2;
-
   // String that indicates the current status of the object.
   string status = 3;
-
   // Number of concurrent users for this resource has been limited. If True
   int32 allow_maximum = 4;
-
   // Limit on the maximum number of users allowed to use this resource concurrently. The value is only valid if the AllowMaximum property is set to FALSE.
   int32 maximum_allowed = 5;
-
   // Alias given to a path set up as a share on a computer system running Windows.
   string name = 6;
-
   // Local path of the Windows share.
   string path = 7;
-
   // Type of resource being shared. Types include: disk drives
   int32 type = 8;
 }

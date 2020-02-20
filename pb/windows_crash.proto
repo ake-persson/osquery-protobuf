@@ -1,75 +1,51 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Extracted information from Windows crash logs (Minidumps).
 message WindowsCrash {
-
   // Timestamp (log format) of the crash
   string datetime = 1;
-
   // Path of the crashed module within the process
   string module = 2;
-
   // Path of the executable file for the crashed process
   string path = 3;
-
   // Process ID of the crashed process
   int64 pid = 4;
-
   // Thread ID of the crashed thread
   int64 tid = 5;
-
   // File version info of the crashed process
   string version = 6;
-
   // Uptime of the process in seconds
   int64 process_uptime = 7;
-
   // Multiple stack frames from the stack trace
   string stack_trace = 8;
-
   // The Windows exception code
   string exception_code = 9;
-
   // The NTSTATUS error message associated with the exception code
   string exception_message = 10;
-
   // Address (in hex) where the exception occurred
   string exception_address = 11;
-
   // The values of the system registers
   string registers = 12;
-
   // Command-line string passed to the crashed process
   string command_line = 13;
-
   // Current working directory of the crashed process
   string current_directory = 14;
-
   // Username of the user who ran the crashed process
   string username = 15;
-
   // Name of the machine where the crash happened
   string machine_name = 16;
-
   // Windows major version of the machine
   int32 major_version = 17;
-
   // Windows minor version of the machine
   int32 minor_version = 18;
-
   // Windows build number of the crashing machine
   int32 build_number = 19;
-
   // Type of crash log
   string type = 20;
-
   // Path of the log file
   string crash_path = 21;
 }

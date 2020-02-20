@@ -1,30 +1,21 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // List of active osquery extensions.
 message OsqueryExtension {
-
   // The transient ID assigned for communication
   int64 uuid = 1;
-
   // Extension's name
   string name = 2;
-
   // Extension's version
   string version = 3;
-
   // osquery SDK version used to build the extension
   string sdk_version = 4;
-
   // Path of the extenion's domain socket or library path
   string path = 5;
-
   // SDK extension type: extension or module
   string type = 6;
 }

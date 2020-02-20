@@ -1,18 +1,13 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Run searches against the spotlight database.
 message Mdfind {
-
   // Path of the file returned from spotlight
   string path = 1;
-
   // The query that was run to find the file
   string query = 2;
 }

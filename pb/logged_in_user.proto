@@ -1,36 +1,25 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Users with an active shell on the system.
 message LoggedInUser {
-
   // Login type
   string type = 1;
-
   // User login name
   string user = 2;
-
   // Device name
   string tty = 3;
-
   // Remote hostname
   string host = 4;
-
   // Time entry was made
   int32 time = 5;
-
   // Process (or thread) ID
   int32 pid = 6;
-
   // The user's unique security identifier
   string sid = 7;
-
   // HKEY_USERS registry hive
   string registry_hive = 8;
 }

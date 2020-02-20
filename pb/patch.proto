@@ -1,36 +1,25 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Lists all the patches applied. Note: This does not include patches applied via MSI or downloaded from Windows Update (e.g. Service Packs).
 message Patch {
-
   // The name of the host the patch is installed on.
   string csname = 1;
-
   // The KB ID of the patch.
   string hotfix_id = 2;
-
   // Short description of the patch.
   string caption = 3;
-
   // Fuller description of the patch.
   string description = 4;
-
   // Additional comments about the patch.
   string fix_comments = 5;
-
   // The system context in which the patch as installed.
   string installed_by = 6;
-
   // Indicates when the patch was installed. Lack of a value does not indicate that the patch was not installed.
   string install_date = 7;
-
   // The date when the patch was installed.
   string installed_on = 8;
 }

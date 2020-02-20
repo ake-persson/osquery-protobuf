@@ -1,21 +1,15 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Apple's System Integrity Protection (rootless) status.
 message SipConfig {
-
   // The System Integrity Protection config flag
   string config_flag = 1;
-
   // 1 if this configuration is enabled
   int32 enabled = 2;
-
   // 1 if this configuration is enabled
   int32 enabled_nvram = 3;
 }

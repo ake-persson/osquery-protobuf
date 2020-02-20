@@ -1,39 +1,27 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // The IOKit registry matching the DeviceTree plane.
 message IokitDevicetree {
-
   // Device node name
   string name = 1;
-
   // Best matching device class (most-specific category)
   string class = 2;
-
   // IOKit internal registry ID
   int64 id = 3;
-
   // Parent device registry ID
   int64 parent = 4;
-
   // Device tree path
   string device_path = 5;
-
   // 1 if the device conforms to IOService else 0
   int32 service = 6;
-
   // 1 if the device is in a busy state else 0
   int32 busy_state = 7;
-
   // The device reference count
   int32 retain_count = 8;
-
   // Device nested depth
   int32 depth = 9;
 }

@@ -1,21 +1,15 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Apple NVRAM variable listing.
 message Nvram {
-
   // Variable name
   string name = 1;
-
   // Data type (CFData
   string type = 2;
-
   // Raw variable data
   string value = 3;
 }

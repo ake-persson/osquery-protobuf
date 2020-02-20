@@ -1,27 +1,19 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Useful CPU features from the cpuid ASM call.
 message Cpuid {
-
   // Present feature flags
   string feature = 1;
-
   // Bit value or string
   string value = 2;
-
   // Register used to for feature value
   string output_register = 3;
-
   // Bit in register value for feature value
   int32 output_bit = 4;
-
   // Value of EAX used
   string input_eax = 5;
 }

@@ -1,39 +1,27 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Use TSK to enumerate details about partitions on a disk device.
 message DevicePartition {
-
   // Absolute file path to device node
   string device = 1;
-
   // A partition number or description
   int32 partition = 2;
-
-  // 
+  //
   string label = 3;
-
-  // 
+  //
   string type = 4;
-
-  // 
+  //
   int64 offset = 5;
-
   // Byte size of each block
   int64 blocks_size = 6;
-
   // Number of blocks
   int64 blocks = 7;
-
   // Number of meta nodes
   int64 inodes = 8;
-
-  // 
+  //
   int32 flags = 9;
 }

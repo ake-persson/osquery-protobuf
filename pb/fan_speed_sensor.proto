@@ -1,30 +1,21 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Fan speeds.
 message FanSpeedSensor {
-
   // Fan number
   string fan = 1;
-
   // Fan name
   string name = 2;
-
   // Actual speed
   int32 actual = 3;
-
   // Minimum speed
   int32 min = 4;
-
   // Maximum speed
   int32 max = 5;
-
   // Target speed
   int32 target = 6;
 }

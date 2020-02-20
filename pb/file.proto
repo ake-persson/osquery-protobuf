@@ -1,78 +1,53 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Interactive filesystem attributes and metadata.
 message File {
-
   // Absolute file path
   string path = 1;
-
   // Directory of file(s)
   string directory = 2;
-
   // Name portion of file path
   string filename = 3;
-
   // Filesystem inode number
   int64 inode = 4;
-
   // Owning user ID
   int64 uid = 5;
-
   // Owning group ID
   int64 gid = 6;
-
   // Permission bits
   string mode = 7;
-
   // Device ID (optional)
   int64 device = 8;
-
   // Size of file in bytes
   int64 size = 9;
-
   // Block size of filesystem
   int32 block_size = 10;
-
   // Last access time
   int64 atime = 11;
-
   // Last modification time
   int64 mtime = 12;
-
   // Last status change time
   int64 ctime = 13;
-
   // (B)irth or (cr)eate time
   int64 btime = 14;
-
   // Number of hard links
   int32 hard_links = 15;
-
   // 1 if the path is a symlink
   int32 symlink = 16;
-
   // File status
   string type = 17;
-
   // File attrib string. See: https://ss64.com/nt/attrib.html
   string attributes = 18;
-
   // Volume serial number
   string volume_serial = 19;
-
   // file ID
   string file_id = 20;
-
   // File product version
   string product_version = 21;
-
   // The BSD file flags (chflags). Possible values: NODUMP
   string bsd_flags = 22;
 }

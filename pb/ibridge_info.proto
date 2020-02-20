@@ -1,24 +1,17 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Information about the Apple iBridge hardware controller.
 message IbridgeInfo {
-
   // Boot UUID of the iBridge controller
   string boot_uuid = 1;
-
   // The manufacturer and chip version
   string coprocessor_version = 2;
-
   // The build version of the firmware
   string firmware_version = 3;
-
   // Unique id of the iBridge controller
   string unique_chip_id = 4;
 }

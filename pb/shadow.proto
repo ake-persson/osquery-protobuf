@@ -1,42 +1,29 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Local system users encrypted passwords and related information. Please note, that you usually need superuser rights to access `/etc/shadow`.
 message Shadow {
-
   // Password status
   string password_status = 1;
-
   // Password hashing algorithm
   string hash_alg = 2;
-
   // Date of last password change (starting from UNIX epoch date)
   int64 last_change = 3;
-
   // Minimal number of days between password changes
   int64 min = 4;
-
   // Maximum number of days between password changes
   int64 max = 5;
-
   // Number of days before password expires to warn user about it
   int64 warning = 6;
-
   // Number of days after password expires until account is blocked
   int64 inactive = 7;
-
   // Number of days since UNIX epoch date until account is disabled
   int64 expire = 8;
-
   // Reserved
   int64 flag = 9;
-
   // Username
   string username = 10;
 }

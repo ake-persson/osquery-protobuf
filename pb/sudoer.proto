@@ -1,21 +1,15 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Rules for running commands as other users via sudo.
 message Sudoer {
-
   // Source file containing the given rule
   string source = 1;
-
   // Symbol for given rule
   string header = 2;
-
   // Rule definition
   string rule_details = 3;
 }

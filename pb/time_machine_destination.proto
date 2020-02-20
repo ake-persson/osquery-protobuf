@@ -1,33 +1,23 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Locations backed up to using Time Machine.
 message TimeMachineDestination {
-
   // Human readable name of drive
   string alias = 1;
-
   // Time Machine destination ID
   string destination_id = 2;
-
   // Consistency scan date
   int32 consistency_scan_date = 3;
-
   // Root UUID of backup volume
   string root_volume_uuid = 4;
-
   // Bytes available on volume
   int32 bytes_available = 5;
-
   // Bytes used on volume
   int32 bytes_used = 6;
-
   // Last known encrypted state
   string encryption = 7;
 }

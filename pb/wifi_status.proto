@@ -1,51 +1,35 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // OS X current WiFi status.
 message WifiStatus {
-
   // Name of the interface
   string interface = 1;
-
   // SSID octets of the network
   string ssid = 2;
-
   // The current basic service set identifier
   string bssid = 3;
-
   // Name of the network
   string network_name = 4;
-
   // The country code (ISO/IEC 3166-1:1997) for the network
   string country_code = 5;
-
   // Type of security on this network
   string security_type = 6;
-
   // The current received signal strength indication (dbm)
   int32 rssi = 7;
-
   // The current noise measurement (dBm)
   int32 noise = 8;
-
   // Channel number
   int32 channel = 9;
-
   // Channel width
   int32 channel_width = 10;
-
   // Channel band
   int32 channel_band = 11;
-
   // The current transmit rate
   string transmit_rate = 12;
-
   // The current operating mode for the Wi-Fi interface
   string mode = 13;
 }

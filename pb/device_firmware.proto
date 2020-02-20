@@ -1,21 +1,15 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // A best-effort list of discovered firmware versions.
 message DeviceFirmware {
-
   // Type of device
   string type = 1;
-
   // The device name
   string device = 2;
-
   // Firmware version
   string version = 3;
 }

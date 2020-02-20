@@ -1,24 +1,17 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // A line-delimited (command) table of per-user .*_history data.
 message ShellHistory {
-
   // Shell history owner
   int64 uid = 1;
-
   // Entry timestamp. It could be absent
   int32 time = 2;
-
   // Unparsed date/line/command history line
   string command = 3;
-
   // Path to the .*_history for this user
   string history_file = 4;
 }

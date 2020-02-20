@@ -1,24 +1,17 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Retrieve metrics from a Prometheus server.
 message PrometheusMetric {
-
   // Address of prometheus target
   string target_name = 1;
-
   // Name of collected Prometheus metric
   string metric_name = 2;
-
   // Value of collected Prometheus metric
   double metric_value = 3;
-
   // Unix timestamp of collected data in MS
   int64 timestamp_ms = 4;
 }

@@ -1,48 +1,33 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Provides provides raw data from performance counters that monitor hard or fixed disk drives on the system.
 message PhysicalDiskPerformance {
-
   // Name of the physical disk
   string name = 1;
-
   // Average number of bytes transferred from the disk during read operations
   int64 avg_disk_bytes_per_read = 2;
-
   // Average number of bytes transferred to the disk during write operations
   int64 avg_disk_bytes_per_write = 3;
-
   // Average number of read requests that were queued for the selected disk during the sample interval
   int64 avg_disk_read_queue_length = 4;
-
   // Average number of write requests that were queued for the selected disk during the sample interval
   int64 avg_disk_write_queue_length = 5;
-
   // Average time
   int32 avg_disk_sec_per_read = 6;
-
   // Average time
   int32 avg_disk_sec_per_write = 7;
-
   // Number of requests outstanding on the disk at the time the performance data is collected
   int32 current_disk_queue_length = 8;
-
   // Percentage of elapsed time that the selected disk drive is busy servicing read requests
   int64 percent_disk_read_time = 9;
-
   // Percentage of elapsed time that the selected disk drive is busy servicing write requests
   int64 percent_disk_write_time = 10;
-
   // Percentage of elapsed time that the selected disk drive is busy servicing read or write requests
   int64 percent_disk_time = 11;
-
   // Percentage of time during the sample interval that the disk was idle
   int64 percent_idle_time = 12;
 }

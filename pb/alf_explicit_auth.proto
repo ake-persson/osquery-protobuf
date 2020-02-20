@@ -1,15 +1,11 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // ALF services explicitly allowed to perform networking.
 message AlfExplicitAuth {
-
   // Process name explicitly allowed
   string process = 1;
 }

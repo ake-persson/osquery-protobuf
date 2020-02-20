@@ -1,60 +1,41 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Application, System, and Mobile App crash logs.
 message Crash {
-
   // Type of crash log
   string type = 1;
-
   // Process (or thread) ID of the crashed process
   int64 pid = 2;
-
   // Path to the crashed process
   string path = 3;
-
   // Location of log file
   string crash_path = 4;
-
   // Identifier of the crashed process
   string identifier = 5;
-
   // Version info of the crashed process
   string version = 6;
-
   // Parent PID of the crashed process
   int64 parent = 7;
-
   // Process responsible for the crashed process
   string responsible = 8;
-
   // User ID of the crashed process
   int32 uid = 9;
-
   // Date/Time at which the crash occurred
   string datetime = 10;
-
   // Thread ID which crashed
   int64 crashed_thread = 11;
-
   // Most recent frame from the stack trace
   string stack_trace = 12;
-
   // Exception type of the crash
   string exception_type = 13;
-
   // Exception codes from the crash
   string exception_codes = 14;
-
   // Exception notes from the crash
   string exception_notes = 15;
-
   // The value of the system registers
   string registers = 16;
 }

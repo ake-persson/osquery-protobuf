@@ -1,42 +1,29 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Track YARA matches for files specified in configuration data.
 message YaraEvent {
-
   // The path scanned
   string target_path = 1;
-
   // The category of the file
   string category = 2;
-
   // Change action (UPDATE
   string action = 3;
-
   // ID used during bulk update
   int64 transaction_id = 4;
-
   // List of YARA matches
   string matches = 5;
-
   // Number of YARA matches
   int32 count = 6;
-
   // Matching strings
   string strings = 7;
-
   // Matching tags
   string tags = 8;
-
   // Time of the scan
   int64 time = 9;
-
   // Event ID
   string eid = 10;
 }

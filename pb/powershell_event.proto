@@ -1,36 +1,25 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Powershell script blocks reconstructed to their full script content, this table requires script block logging to be enabled.
 message PowershellEvent {
-
   // Timestamp the event was received by the osquery event publisher
   int64 time = 1;
-
   // System time at which the Powershell script event occurred
   string datetime = 2;
-
   // The unique GUID of the powershell script to which this block belongs
   string script_block_id = 3;
-
   // The total number of script blocks for this script
   int32 script_block_count = 4;
-
   // The text content of the Powershell script
   string script_text = 5;
-
   // The name of the Powershell script
   string script_name = 6;
-
   // The path for the Powershell script
   string script_path = 7;
-
   // How similar the Powershell script is to a provided 'normal' character frequency
   double cosine_similarity = 8;
 }

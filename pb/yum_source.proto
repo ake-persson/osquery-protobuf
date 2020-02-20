@@ -1,27 +1,19 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Current list of Yum repositories or software channels.
 message YumSource {
-
   // Repository name
   string name = 1;
-
   // Repository base URL
   string baseurl = 2;
-
   // Whether the repository is used
   string enabled = 3;
-
   // Whether packages are GPG checked
   string gpgcheck = 4;
-
   // URL to GPG key
   string gpgkey = 5;
 }

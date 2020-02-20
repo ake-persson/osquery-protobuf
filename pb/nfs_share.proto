@@ -1,21 +1,15 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // NFS shares exported by the host.
 message NfsShare {
-
   // Filesystem path to the share
   string share = 1;
-
   // Options string set on the export share
   string options = 2;
-
   // 1 if the share is exported readonly else 0
   int32 readonly = 3;
 }

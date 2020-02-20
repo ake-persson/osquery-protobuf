@@ -1,30 +1,21 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Filesystem hash data.
 message Hash {
-
   // Must provide a path or directory
   string path = 1;
-
   // Must provide a path or directory
   string directory = 2;
-
   // MD5 hash of provided filesystem data
   string md5 = 3;
-
   // SHA1 hash of provided filesystem data
   string sha1 = 4;
-
   // SHA256 hash of provided filesystem data
   string sha256 = 5;
-
   // ssdeep hash of provided filesystem data
   string ssdeep = 6;
 }

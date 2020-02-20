@@ -1,48 +1,33 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // USB devices that are actively plugged into the host system.
 message UsbDevice {
-
   // USB Device used address
   int32 usb_address = 1;
-
   // USB Device used port
   int32 usb_port = 2;
-
   // USB Device vendor string
   string vendor = 3;
-
   // Hex encoded USB Device vendor identifier
   string vendor_id = 4;
-
   // USB Device version number
   string version = 5;
-
   // USB Device model string
   string model = 6;
-
   // Hex encoded USB Device model identifier
   string model_id = 7;
-
   // USB Device serial connection
   string serial = 8;
-
   // USB Device class
   string class = 9;
-
   // USB Device subclass
   string subclass = 10;
-
   // USB Device protocol
   string protocol = 11;
-
   // 1 If USB device is removable else 0
   int32 removable = 12;
 }

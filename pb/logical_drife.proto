@@ -1,33 +1,23 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Details for logical drives on the system. A logical drive generally represents a single partition.
 message LogicalDrife {
-
   // The drive id
   string device_id = 1;
-
   // Deprecated (always 'Unknown').
   string type = 2;
-
   // The canonical description of the drive
   string description = 3;
-
   // The amount of free space
   int64 free_space = 4;
-
   // The total amount of space
   int64 size = 5;
-
   // The file system of the drive.
   string file_system = 6;
-
   // True if Windows booted from this drive.
   int32 boot_partition = 7;
 }

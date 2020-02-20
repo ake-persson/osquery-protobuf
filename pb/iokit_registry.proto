@@ -1,33 +1,23 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // The full IOKit registry without selecting a plane.
 message IokitRegistry {
-
   // Default name of the node
   string name = 1;
-
   // Best matching device class (most-specific category)
   string class = 2;
-
   // IOKit internal registry ID
   int64 id = 3;
-
   // Parent registry ID
   int64 parent = 4;
-
   // 1 if the node is in a busy state else 0
   int32 busy_state = 5;
-
   // The node reference count
   int32 retain_count = 6;
-
   // Node nested depth
   int32 depth = 7;
 }

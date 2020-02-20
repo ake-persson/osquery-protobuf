@@ -1,33 +1,23 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // OS X package bill of materials (BOM) file list.
 message PackageBom {
-
   // Package file or directory
   string filepath = 1;
-
   // Expected user of file or directory
   int32 uid = 2;
-
   // Expected group of file or directory
   int32 gid = 3;
-
   // Expected permissions
   int32 mode = 4;
-
   // Expected file size
   int64 size = 5;
-
   // Timestamp the file was installed
   int32 modified_time = 6;
-
   // Path of package bom
   string path = 7;
 }

@@ -1,75 +1,51 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Track time/action process executions.
 message ProcessEvent {
-
   // Process (or thread) ID
   int64 pid = 1;
-
   // Path of executed file
   string path = 2;
-
   // File mode permissions
   string mode = 3;
-
   // Command line arguments (argv)
   string cmdline = 4;
-
   // Actual size (bytes
   int64 cmdline_size = 5;
-
   // Actual size (bytes
   int64 env_size = 6;
-
   // The process current working directory
   string cwd = 7;
-
   // Audit User ID at process start
   int64 auid = 8;
-
   // User ID at process start
   int64 uid = 9;
-
   // Effective user ID at process start
   int64 euid = 10;
-
   // Group ID at process start
   int64 gid = 11;
-
   // Effective group ID at process start
   int64 egid = 12;
-
   // File owner user ID
   int64 owner_uid = 13;
-
   // File owner group ID
   int64 owner_gid = 14;
-
   // List of structures that overflowed
   string overflows = 15;
-
   // Process parent's PID
   int64 parent = 16;
-
   // Time of execution in UNIX time
   int64 time = 17;
-
   // Time of execution in system uptime
   int64 uptime = 18;
-
   // Event ID
   string eid = 19;
-
   // OpenBSM Attribute: Status of the process
   int64 status = 20;
-
   // Syscall name: fork
   string syscall = 21;
 }

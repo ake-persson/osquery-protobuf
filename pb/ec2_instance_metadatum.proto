@@ -1,54 +1,37 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // EC2 instance metadata.
 message Ec2InstanceMetadatum {
-
   // EC2 instance ID
   string instance_id = 1;
-
   // EC2 instance type
   string instance_type = 2;
-
   // Hardware architecture of this EC2 instance
   string architecture = 3;
-
   // AWS region in which this instance launched
   string region = 4;
-
   // Availability zone in which this instance launched
   string availability_zone = 5;
-
   // Private IPv4 DNS hostname of the first interface of this instance
   string local_hostname = 6;
-
   // Private IPv4 address of the first interface of this instance
   string local_ipv4 = 7;
-
   // MAC address for the first network interface of this EC2 instance
   string mac = 8;
-
   // Comma separated list of security group names
   string security_groups = 9;
-
   // If there is an IAM role associated with the instance
   string iam_arn = 10;
-
   // AMI ID used to launch this EC2 instance
   string ami_id = 11;
-
   // ID of the reservation
   string reservation_id = 12;
-
   // AWS account ID which owns this EC2 instance
   string account_id = 13;
-
   // SSH public key. Only available if supplied at instance launch time
   string ssh_public_key = 14;
 }

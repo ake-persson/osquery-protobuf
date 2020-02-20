@@ -1,27 +1,19 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Retrieve NTFS ACL permission information for files and directories.
 message NtfsAclPermission {
-
   // Path to the file or directory.
   string path = 1;
-
   // Type of access mode for the access control entry.
   string type = 2;
-
   // User or group to which the ACE applies.
   string principal = 3;
-
   // Specific permissions that indicate the rights described by the ACE.
   string access = 4;
-
   // The inheritance policy of the ACE.
   string inherited_from = 5;
 }

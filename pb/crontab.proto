@@ -1,36 +1,25 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Line parsed values from system and user cron/tab.
 message Crontab {
-
   // The job @event name (rare)
   string event = 1;
-
   // The exact minute for the job
   string minute = 2;
-
   // The hour of the day for the job
   string hour = 3;
-
   // The day of the month for the job
   string day_of_month = 4;
-
   // The month of the year for the job
   string month = 5;
-
   // The day of the week for the job
   string day_of_week = 6;
-
   // Raw command string
   string command = 7;
-
   // File parsed
   string path = 8;
 }

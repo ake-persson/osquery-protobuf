@@ -1,84 +1,57 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Docker container statistics. Queries on this table take at least one second.
 message DockerContainerStat {
-
   // Container ID
   string id = 1;
-
   // Container name
   string name = 2;
-
   // Number of processes
   int32 pids = 3;
-
   // UNIX time when stats were read
   int64 read = 4;
-
   // UNIX time when stats were last read
   int64 preread = 5;
-
   // Difference between read and preread in nano-seconds
   int64 interval = 6;
-
   // Total disk read bytes
   int64 disk_read = 7;
-
   // Total disk write bytes
   int64 disk_write = 8;
-
   // Number of processors
   int32 num_procs = 9;
-
   // Total CPU usage
   int64 cpu_total_usage = 10;
-
   // CPU kernel mode usage
   int64 cpu_kernelmode_usage = 11;
-
   // CPU user mode usage
   int64 cpu_usermode_usage = 12;
-
   // CPU system usage
   int64 system_cpu_usage = 13;
-
   // Online CPUs
   int32 online_cpus = 14;
-
   // Last read total CPU usage
   int64 pre_cpu_total_usage = 15;
-
   // Last read CPU kernel mode usage
   int64 pre_cpu_kernelmode_usage = 16;
-
   // Last read CPU user mode usage
   int64 pre_cpu_usermode_usage = 17;
-
   // Last read CPU system usage
   int64 pre_system_cpu_usage = 18;
-
   // Last read online CPUs
   int32 pre_online_cpus = 19;
-
   // Memory usage
   int64 memory_usage = 20;
-
   // Memory maximum usage
   int64 memory_max_usage = 21;
-
   // Memory limit
   int64 memory_limit = 22;
-
   // Total network bytes read
   int64 network_rx_bytes = 23;
-
   // Total network bytes transmitted
   int64 network_tx_bytes = 24;
 }

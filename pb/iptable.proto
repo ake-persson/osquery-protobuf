@@ -1,66 +1,45 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Linux IP packet filtering and NAT tool.
 message Iptable {
-
   // Packet matching filter table name.
   string filter_name = 1;
-
   // Size of module content.
   string chain = 2;
-
   // Policy that applies for this rule.
   string policy = 3;
-
   // Target that applies for this rule.
   string target = 4;
-
   // Protocol number identification.
   int32 protocol = 5;
-
   // Protocol source port(s).
   string src_port = 6;
-
   // Protocol destination port(s).
   string dst_port = 7;
-
   // Source IP address.
   string src_ip = 8;
-
   // Source IP address mask.
   string src_mask = 9;
-
   // Input interface for the rule.
   string iniface = 10;
-
   // Input interface mask for the rule.
   string iniface_mask = 11;
-
   // Destination IP address.
   string dst_ip = 12;
-
   // Destination IP address mask.
   string dst_mask = 13;
-
   // Output interface for the rule.
   string outiface = 14;
-
   // Output interface mask for the rule.
   string outiface_mask = 15;
-
   // Matching rule that applies.
   string match = 16;
-
   // Number of matching packets for this rule.
   int32 packets = 17;
-
   // Number of matching bytes for this rule.
   int32 bytes = 18;
 }

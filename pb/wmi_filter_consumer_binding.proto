@@ -1,24 +1,17 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Lists the relationship between event consumers and filters.
 message WmiFilterConsumerBinding {
-
   // Reference to an instance of __EventConsumer that represents the object path to a logical consumer
   string consumer = 1;
-
   // Reference to an instance of __EventFilter that represents the object path to an event filter which is a query that specifies the type of event to be received.
   string filter = 2;
-
   // The name of the class.
   string class = 3;
-
   // Relative path to the class or instance.
   string relative_path = 4;
 }

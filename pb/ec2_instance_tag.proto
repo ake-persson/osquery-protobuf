@@ -1,21 +1,15 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // EC2 instance tag key value pairs.
 message Ec2InstanceTag {
-
   // EC2 instance ID
   string instance_id = 1;
-
   // Tag key
   string key = 2;
-
   // Tag value
   string value = 3;
 }

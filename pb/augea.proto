@@ -1,24 +1,17 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Configuration files parsed by augeas.
 message Augea {
-
   // The node path of the configuration item
   string node = 1;
-
   // The value of the configuration item
   string value = 2;
-
   // The label of the configuration item
   string label = 3;
-
   // The path to the configuration file
   string path = 4;
 }

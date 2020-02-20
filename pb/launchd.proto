@@ -1,51 +1,35 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // LaunchAgents and LaunchDaemons from default search paths.
 message Launchd {
-
   // Path to daemon or agent plist
   string path = 1;
-
   // File name of plist (used by launchd)
   string name = 2;
-
   // Daemon or agent service name
   string label = 3;
-
   // Path to target program
   string program = 4;
-
   // Should the program run on launch load
   string run_at_load = 5;
-
   // Should the process be restarted if killed
   string keep_alive = 6;
-
   // Deprecated key
   string on_demand = 7;
-
   // Skip loading this daemon or agent on boot
   string disabled = 8;
-
   // Run this daemon or agent as this username
   string username = 9;
-
   // Run this daemon or agent as this group
   string groupname = 10;
-
   // Pipe stdout to a target path
   string stdout_path = 11;
-
   // Pipe stderr to a target path
   string stderr_path = 12;
-
   // Frequency to run in seconds
   string start_interval = 13;
 }

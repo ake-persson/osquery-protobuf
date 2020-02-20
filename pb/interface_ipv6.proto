@@ -1,27 +1,19 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // IPv6 configuration and stats of network interfaces.
 message InterfaceIpv6 {
-
   // Interface name
   string interface = 1;
-
   // Current Hop Limit
   int32 hop_limit = 2;
-
   // Enable IP forwarding
   int32 forwarding_enabled = 3;
-
   // Accept ICMP redirect messages
   int32 redirect_accept = 4;
-
   // Accept ICMP Router Advertisement
   int32 rtadv_accept = 5;
 }

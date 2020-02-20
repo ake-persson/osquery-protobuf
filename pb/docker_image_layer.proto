@@ -1,21 +1,15 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Docker image layers information.
 message DockerImageLayer {
-
   // Image ID
   string id = 1;
-
   // Layer ID
   string layer_id = 2;
-
   // Layer Order (1 = base layer)
   int32 layer_order = 3;
 }

@@ -1,18 +1,13 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Displays information about the system wide load averages.
 message LoadAverage {
-
   // Period over which the average is calculated.
   string period = 1;
-
   // Load average over the specified period.
   string average = 2;
 }

@@ -1,45 +1,31 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Display kernel virtual address and speculative execution information for the system.
 message KvaSpeculativeInfo {
-
   // Kernel Virtual Address shadowing is enabled.
   int32 kva_shadow_enabled = 1;
-
   // User pages are marked as global.
   int32 kva_shadow_user_global = 2;
-
   // Kernel VA PCID flushing optimization is enabled.
   int32 kva_shadow_pcid = 3;
-
   // Kernel VA INVPCID is enabled.
   int32 kva_shadow_inv_pcid = 4;
-
   // Branch Prediction mitigations are enabled.
   int32 bp_mitigations = 5;
-
   // Branch Predictions are disabled via system policy.
   int32 bp_system_pol_disabled = 6;
-
   // Branch Predictions are disabled due to lack of microcode update.
   int32 bp_microcode_disabled = 7;
-
   // SPEC_CTRL MSR supported by CPU Microcode.
   int32 cpu_spec_ctrl_supported = 8;
-
   // Windows uses IBRS.
   int32 ibrs_support_enabled = 9;
-
   // Windows uses STIBP.
   int32 stibp_support_enabled = 10;
-
   // PRED_CMD MSR supported by CPU Microcode.
   int32 cpu_pred_cmd_supported = 11;
 }

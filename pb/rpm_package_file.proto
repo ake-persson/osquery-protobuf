@@ -1,33 +1,23 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // RPM packages that are currently installed on the host system.
 message RpmPackageFile {
-
   // RPM package name
   string package = 1;
-
   // File path within the package
   string path = 2;
-
   // File default username from info DB
   string username = 3;
-
   // File default groupname from info DB
   string groupname = 4;
-
   // File permissions mode from info DB
   string mode = 5;
-
   // Expected file size in bytes from RPM info DB
   int64 size = 6;
-
   // SHA256 file digest from RPM info DB
   string sha256 = 7;
 }

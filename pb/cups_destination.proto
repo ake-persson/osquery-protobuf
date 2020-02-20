@@ -1,21 +1,15 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Returns all configured printers.
 message CupsDestination {
-
   // Name of the printer
   string name = 1;
-
   // Option name
   string option_name = 2;
-
   // Option value
   string option_value = 3;
 }

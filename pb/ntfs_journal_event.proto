@@ -1,51 +1,35 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Track time/action changes to files specified in configuration data.
 message NtfsJournalEvent {
-
   // Change action (Write
   string action = 1;
-
   // The category that the event originated from
   string category = 2;
-
   // Old path (renames only)
   string old_path = 3;
-
   // Path
   string path = 4;
-
   // Journal record timestamp
   string record_timestamp = 5;
-
   // The update sequence number that identifies the journal record
   string record_usn = 6;
-
   // The ordinal that associates a journal record with a filename
   string node_ref_number = 7;
-
   // The ordinal that associates a journal record with a filename's parent directory
   string parent_ref_number = 8;
-
   // The drive letter identifying the source journal
   string drive_letter = 9;
-
   // File attributes
   string file_attributes = 10;
-
   // Set to 1 if either path or old_path only contains the file or folder name
   int64 partial = 11;
-
   // Time of file event
   int64 time = 12;
-
   // Event ID
   string eid = 13;
 }

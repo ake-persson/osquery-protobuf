@@ -1,45 +1,31 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Firefox browser extensions, webapps, and addons.
 message FirefoxAddon {
-
   // Addon display name
   string name = 1;
-
   // Addon identifier
   string identifier = 2;
-
   // Addon-supported creator string
   string creator = 3;
-
   // Extension
   string type = 4;
-
   // Addon-supplied version string
   string version = 5;
-
   // Addon-supplied description string
   string description = 6;
-
   // URL that installed the addon
   string source_url = 7;
-
   // 1 If the addon is shown in browser else 0
   int32 visible = 8;
-
   // 1 If the addon is active else 0
   int32 active = 9;
-
   // Global
   string location = 10;
-
   // Path to plugin bundle
   string path = 11;
 }

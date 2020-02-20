@@ -1,36 +1,25 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Pipes and partner processes for each process.
 message ProcessOpenPipe {
-
   // Process ID
   int64 pid = 1;
-
   // File descriptor
   int64 fd = 2;
-
   // Pipe open mode (r/w)
   string mode = 3;
-
   // Pipe inode number
   int64 inode = 4;
-
   // Pipe Type: named vs unnamed/anonymous
   string type = 5;
-
   // Process ID of partner process sharing a particular pipe
   int64 partner_pid = 6;
-
   // File descriptor of shared pipe at partner's end
   int64 partner_fd = 7;
-
   // Mode of shared pipe at partner's end
   string partner_mode = 8;
 }

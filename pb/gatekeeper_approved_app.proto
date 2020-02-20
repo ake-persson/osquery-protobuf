@@ -1,24 +1,17 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Gatekeeper apps a user has allowed to run.
 message GatekeeperApprovedApp {
-
   // Path of executable allowed to run
   string path = 1;
-
   // Code signing requirement language
   string requirement = 2;
-
   // Last change time
   double ctime = 3;
-
   // Last modification time
   double mtime = 4;
 }

@@ -1,24 +1,17 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // pkgng packages that are currently installed on the host system.
 message PkgPackage {
-
   // Package name
   string name = 1;
-
   // Package version
   string version = 2;
-
   // Package size in bytes
   int64 flatsize = 3;
-
   // Architecture(s) supported
   string arch = 4;
 }

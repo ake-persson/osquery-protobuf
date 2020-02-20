@@ -1,30 +1,21 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // All of the Windows registry hives.
 message Registry {
-
   // Name of the key to search for
   string key = 1;
-
   // Full path to the value
   string path = 2;
-
   // Name of the registry value entry
   string name = 3;
-
   // Type of the registry value
   string type = 4;
-
   // Data content of registry value
   string data = 5;
-
   // timestamp of the most recent registry write
   int64 mtime = 6;
 }

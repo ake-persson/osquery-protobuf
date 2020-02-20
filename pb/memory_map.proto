@@ -1,21 +1,15 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // OS memory region map.
 message MemoryMap {
-
   // Region name
   string name = 1;
-
   // Start address of memory region
   string start = 2;
-
   // End address of memory region
   string end = 3;
 }

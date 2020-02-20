@@ -1,117 +1,79 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Detailed information and stats of network interfaces.
 message InterfaceDetail {
-
   // Interface name
   string interface = 1;
-
   // MAC of interface (optional)
   string mac = 2;
-
   // Interface type (includes virtual)
   int32 type = 3;
-
   // Network MTU
   int32 mtu = 4;
-
   // Metric based on the speed of the interface
   int32 metric = 5;
-
   // Flags (netdevice) for the device
   int32 flags = 6;
-
   // Input packets
   int64 ipackets = 7;
-
   // Output packets
   int64 opackets = 8;
-
   // Input bytes
   int64 ibytes = 9;
-
   // Output bytes
   int64 obytes = 10;
-
   // Input errors
   int64 ierrors = 11;
-
   // Output errors
   int64 oerrors = 12;
-
   // Input drops
   int64 idrops = 13;
-
   // Output drops
   int64 odrops = 14;
-
   // Packet Collisions detected
   int64 collisions = 15;
-
   // Time of last device modification (optional)
   int64 last_change = 16;
-
   // Interface speed in Mb/s
   int64 link_speed = 17;
-
   // PCI slot number
   string pci_slot = 18;
-
   // The friendly display name of the interface.
   string friendly_name = 19;
-
   // Short description of the object a one-line string.
   string description = 20;
-
   // Name of the network adapter's manufacturer.
   string manufacturer = 21;
-
   // Name of the network connection as it appears in the Network Connections Control Panel program.
   string connection_id = 22;
-
   // State of the network adapter connection to the network.
   string connection_status = 23;
-
   // Indicates whether the adapter is enabled or not.
   int32 enabled = 24;
-
   // Indicates whether the adapter is a physical or a logical adapter.
   int32 physical_adapter = 25;
-
   // Estimate of the current bandwidth in bits per second.
   int32 speed = 26;
-
   // The name of the service the network adapter uses.
   string service = 27;
-
   // If TRUE
   int32 dhcp_enabled = 28;
-
   // Expiration date and time for a leased IP address that was assigned to the computer by the dynamic host configuration protocol (DHCP) server.
   string dhcp_lease_expires = 29;
-
   // Date and time the lease was obtained for the IP address assigned to the computer by the dynamic host configuration protocol (DHCP) server.
   string dhcp_lease_obtained = 30;
-
   // IP address of the dynamic host configuration protocol (DHCP) server.
   string dhcp_server = 31;
-
   // Organization name followed by a period and an extension that indicates the type of organization
   string dns_domain = 32;
-
   // Array of DNS domain suffixes to be appended to the end of host names during name resolution.
   string dns_domain_suffix_search_order = 33;
-
   // Host name used to identify the local computer for authentication by some utilities.
   string dns_host_name = 34;
-
   // Array of server IP addresses to be used in querying for DNS servers.
   string dns_server_search_order = 35;
 }

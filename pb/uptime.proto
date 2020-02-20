@@ -1,27 +1,19 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Track time passed since last boot.
 message Uptime {
-
   // Days of uptime
   int32 days = 1;
-
   // Hours of uptime
   int32 hours = 2;
-
   // Minutes of uptime
   int32 minutes = 3;
-
   // Seconds of uptime
   int32 seconds = 4;
-
   // Total uptime seconds
   int64 total_seconds = 5;
 }

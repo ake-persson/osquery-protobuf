@@ -1,24 +1,17 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Basic active kernel information.
 message KernelInfo {
-
   // Kernel version
   string version = 1;
-
   // Kernel arguments
   string arguments = 2;
-
   // Kernel path
   string path = 3;
-
   // Kernel device identifier
   string device = 4;
 }

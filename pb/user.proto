@@ -1,45 +1,31 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Local user accounts (including domain accounts that have logged on locally (Windows)).
 message User {
-
   // User ID
   uint64 uid = 1;
-
   // Group ID (unsigned)
   uint64 gid = 2;
-
   // User ID as int64 signed (Apple)
   int64 uid_signed = 3;
-
   // Default group ID as int64 signed (Apple)
   int64 gid_signed = 4;
-
   // Username
   string username = 5;
-
   // Optional user description
   string description = 6;
-
   // User's home directory
   string directory = 7;
-
   // User's configured default shell
   string shell = 8;
-
   // User's UUID (Apple) or SID (Windows)
   string uuid = 9;
-
   // Whether the account is roaming (domain)
   string type = 10;
-
   // IsHidden attribute set in OpenDirectory
   int32 is_hidden = 11;
 }

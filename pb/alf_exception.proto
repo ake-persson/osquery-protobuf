@@ -1,18 +1,13 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // OS X application layer firewall (ALF) service exceptions.
 message AlfException {
-
   // Path to the executable that is excepted
   string path = 1;
-
   // Firewall exception state
   int32 state = 2;
 }

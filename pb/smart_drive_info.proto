@@ -1,66 +1,45 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Drive information read by SMART controller utilizing autodetect.
 message SmartDriveInfo {
-
   // Name of block device
   string device_name = 1;
-
   // Drive model family
   string model_family = 2;
-
   // Device Model
   string device_model = 3;
-
   // Device serial number
   string serial_number = 4;
-
   // Device Identifier
   string lu_wwn_device_id = 5;
-
   // Drive firmware version
   string firmware_version = 6;
-
   // Bytes of drive capacity
   string user_capacity = 7;
-
   // Bytes of drive sector sizes
   string sector_sizes = 8;
-
   // Drive RPM
   string rotation_rate = 9;
-
   // Form factor if reported
   string form_factor = 10;
-
   // ATA version of drive
   string ata_version = 11;
-
   // Drive transport type
   string transport_type = 12;
-
   // SATA version
   string sata_version = 13;
-
   // SMART support status
   string smart_supported = 14;
-
   // SMART enabled status
   string smart_enabled = 15;
-
   // Packet device type
   string packet_device_type = 16;
-
   // Device power mode
   string power_mode = 17;
-
   // Warning messages from SMART controller
   string warnings = 18;
 }

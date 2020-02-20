@@ -1,27 +1,19 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Resolvers used by this host.
 message DnsResolver {
-
   // Address type index or order
   int32 id = 1;
-
   // Address type: sortlist
   string type = 2;
-
   // Resolver IP/IPv6 address
   string address = 3;
-
   // Address (sortlist) netmask length
   string netmask = 4;
-
   // Resolver options
   int64 options = 5;
 }

@@ -1,57 +1,39 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Track DMG disk image events (appearance/disappearance) when opened.
 message DiskEvent {
-
   // Appear or disappear
   string action = 1;
-
   // Path of the DMG file accessed
   string path = 2;
-
   // Disk event name
   string name = 3;
-
   // UUID of the volume inside DMG if available
   string uuid = 4;
-
   // Size of partition in bytes
   int64 size = 5;
-
   // 1 if ejectable
   int32 ejectable = 6;
-
   // 1 if mountable
   int32 mountable = 7;
-
   // 1 if writable
   int32 writable = 8;
-
   // Disk event content
   string content = 9;
-
   // Disk event media name string
   string media_name = 10;
-
   // Disk event vendor string
   string vendor = 11;
-
   // Filesystem if available
   string filesystem = 12;
-
   // UDIF Master checksum if available (CRC32)
   string checksum = 13;
-
   // Time of appearance/disappearance in UNIX time
   int64 time = 14;
-
   // Event ID
   string eid = 15;
 }

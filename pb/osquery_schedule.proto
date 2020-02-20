@@ -1,33 +1,23 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Information about the current queries that are scheduled in osquery.
 message OsquerySchedule {
-
   // The given name for this query
   string name = 1;
-
   // The exact query to run
   string query = 2;
-
   // Number of times the query was executed
   int64 executions = 3;
-
   // 1 if the query is blacklisted else 0
   int32 blacklisted = 4;
-
   // Total wall time spent executing
   int64 wall_time = 5;
-
   // Total user time spent executing
   int64 user_time = 6;
-
   // Total system time spent executing
   int64 system_time = 7;
 }

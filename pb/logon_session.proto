@@ -1,57 +1,39 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Windows Logon Session.
 message LogonSession {
-
   // A locally unique identifier (LUID) that identifies a logon session.
   int32 logon_id = 1;
-
   // The account name of the security principal that owns the logon session.
   string user = 2;
-
   // The name of the domain used to authenticate the owner of the logon session.
   string logon_domain = 3;
-
   // The authentication package used to authenticate the owner of the logon session.
   string authentication_package = 4;
-
   // The logon method.
   string logon_type = 5;
-
   // The Terminal Services session identifier.
   int32 session_id = 6;
-
   // The user's security identifier (SID).
   string logon_sid = 7;
-
   // The time the session owner logged on.
   int64 logon_time = 8;
-
   // The name of the server used to authenticate the owner of the logon session.
   string logon_server = 9;
-
   // The DNS name for the owner of the logon session.
   string dns_domain_name = 10;
-
   // The user principal name (UPN) for the owner of the logon session.
   string upn = 11;
-
   // The script used for logging on.
   string logon_script = 12;
-
   // The home directory for the logon session.
   string profile_path = 13;
-
   // The home directory for the logon session.
   string home_directory = 14;
-
   // The drive location of the home directory of the logon session.
   string home_directory_drive = 15;
 }

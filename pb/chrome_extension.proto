@@ -1,45 +1,31 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Chrome browser extensions.
 message ChromeExtension {
-
   // Extension display name
   string name = 1;
-
   // The Chrome profile that contains this extension
   string profile = 2;
-
   // Extension identifier
   string identifier = 3;
-
   // Extension-supplied version
   string version = 4;
-
   // Extension-optional description
   string description = 5;
-
   // Default locale supported by extension
   string locale = 6;
-
   // Extension-supplied update URI
   string update_url = 7;
-
   // Optional extension author
   string author = 8;
-
   // Path to extension folder
   string path = 9;
-
   // The permissions required by the extension
   string permissions = 10;
-
   // The permissions optionally required by the extensions
   string optional_permissions = 11;
 }

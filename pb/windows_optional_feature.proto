@@ -1,24 +1,17 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Lists names and installation states of windows features. Maps to Win32_OptionalFeature WMI class.
 message WindowsOptionalFeature {
-
   // Name of the feature
   string name = 1;
-
   // Caption of feature in settings UI
   string caption = 2;
-
   // Installation state value. 1 == Enabled
   int32 state = 3;
-
   // Installation state name. 'Enabled'
   string statename = 4;
 }

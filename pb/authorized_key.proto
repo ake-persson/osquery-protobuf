@@ -1,21 +1,15 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // A line-delimited authorized_keys table.
 message AuthorizedKey {
-
   // algorithm of key
   string algorithm = 1;
-
   // parsed authorized keys line
   string key = 2;
-
   // Path to the authorized_keys file
   string key_file = 3;
 }

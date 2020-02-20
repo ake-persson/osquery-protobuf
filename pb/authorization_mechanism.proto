@@ -1,27 +1,19 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // OS X Authorization mechanisms database.
 message AuthorizationMechanism {
-
   // Label of the authorization right
   string label = 1;
-
   // Authorization plugin name
   string plugin = 2;
-
   // Name of the mechanism that will be called
   string mechanism = 3;
-
   // If privileged it will run as root
   string privileged = 4;
-
   // The whole string entry
   string entry = 5;
 }

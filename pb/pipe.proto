@@ -1,27 +1,19 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Named and Anonymous pipes.
 message Pipe {
-
   // Process ID of the process to which the pipe belongs
   int64 pid = 1;
-
   // Name of the pipe
   string name = 2;
-
   // Number of instances of the named pipe
   int32 instances = 3;
-
   // The maximum number of instances creatable for this pipe
   int32 max_instances = 4;
-
   // The flags indicating whether this pipe connection is a server or client end
   string flags = 5;
 }

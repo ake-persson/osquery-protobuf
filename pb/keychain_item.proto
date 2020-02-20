@@ -1,33 +1,23 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Generic details about keychain items.
 message KeychainItem {
-
   // Generic item name
   string label = 1;
-
   // Optional item description
   string description = 2;
-
   // Optional keychain comment
   string comment = 3;
-
   // Data item was created
   string created = 4;
-
   // Date of last modification
   string modified = 5;
-
   // Keychain item type (class)
   string type = 6;
-
   // Path to keychain containing item
   string path = 7;
 }

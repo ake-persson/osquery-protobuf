@@ -1,66 +1,45 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Provides information about the internal battery of a Macbook.
 message Battery {
-
   // The battery manufacturer's name
   string manufacturer = 1;
-
   // The date the battery was manufactured UNIX Epoch
   int32 manufacture_date = 2;
-
   // The battery's model number
   string model = 3;
-
   // The battery's unique serial number
   string serial_number = 4;
-
   // The number of charge/discharge cycles
   int32 cycle_count = 5;
-
   // One of the following: \"Good\" describes a well-performing battery
   string health = 6;
-
   // One of the following: \"Normal\" indicates the condition of the battery is within normal tolerances
   string condition = 7;
-
   // One of the following: \"AC Power\" indicates the battery is connected to an external power source
   string state = 8;
-
   // 1 if the battery is currently being charged by a power source. 0 otherwise
   int32 charging = 9;
-
   // 1 if the battery is currently completely charged. 0 otherwise
   int32 charged = 10;
-
   // The battery's designed capacity in mAh
   int32 designed_capacity = 11;
-
   // The battery's actual capacity when it is fully charged in mAh
   int32 max_capacity = 12;
-
   // The battery's current charged capacity in mAh
   int32 current_capacity = 13;
-
   // The percentage of battery remaining before it is drained
   int32 percent_remaining = 14;
-
   // The battery's current amperage in mA
   int32 amperage = 15;
-
   // The battery's current voltage in mV
   int32 voltage = 16;
-
   // The number of minutes until the battery is fully depleted. This value is -1 if this time is still being calculated
   int32 minutes_until_empty = 17;
-
   // The number of minutes until the battery is fully charged. This value is -1 if this time is still being calculated
   int32 minutes_to_full_charge = 18;
 }

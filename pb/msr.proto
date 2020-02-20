@@ -1,30 +1,21 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
-// 
+//
 message Msr {
-
   // Whether the turbo feature is disabled.
   int64 turbo_disabled = 1;
-
   // The turbo feature ratio limit.
   int64 turbo_ratio_limit = 2;
-
   // Platform information.
   int64 platform_info = 3;
-
   // Performance setting for the processor.
   int64 perf_ctl = 4;
-
   // Performance status for the processor.
   int64 perf_status = 5;
-
   // Bitfield controlling enabled features.
   int64 feature_control = 6;
 }

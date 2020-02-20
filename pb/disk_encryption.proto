@@ -1,33 +1,23 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Disk encryption status and information.
 message DiskEncryption {
-
   // Disk name
   string name = 1;
-
   // Disk Universally Unique Identifier
   string uuid = 2;
-
   // 1 If encrypted: true (disk is encrypted)
   int32 encrypted = 3;
-
   // Description of cipher type and mode if available
   string type = 4;
-
   // Currently authenticated user if available (Apple)
   string uid = 5;
-
   // UUID of authenticated user if available (Apple)
   string user_uuid = 6;
-
   // Disk encryption status with one of following values: encrypted | not encrypted | undefined
   string encryption_status = 7;
 }

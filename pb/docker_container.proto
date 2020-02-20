@@ -1,84 +1,57 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Docker containers information.
 message DockerContainer {
-
   // Container ID
   string id = 1;
-
   // Container name
   string name = 2;
-
   // Docker image (name) used to launch this container
   string image = 3;
-
   // Docker image ID
   string image_id = 4;
-
   // Command with arguments
   string command = 5;
-
   // Time of creation as UNIX time
   int64 created = 6;
-
   // Container state (created
   string state = 7;
-
   // Container status information
   string status = 8;
-
   // Identifier of the initial process
   int64 pid = 9;
-
   // Container path
   string path = 10;
-
   // Container entrypoint(s)
   string config_entrypoint = 11;
-
   // Container start time as string
   string started_at = 12;
-
   // Container finish time as string
   string finished_at = 13;
-
   // Is the container privileged
   int32 privileged = 14;
-
   // List of container security options
   string security_options = 15;
-
   // Container environmental variables
   string env_variables = 16;
-
   // Is the root filesystem mounted as read only
   int32 readonly_rootfs = 17;
-
   // cgroup namespace
   string cgroup_namespace = 18;
-
   // IPC namespace
   string ipc_namespace = 19;
-
   // Mount namespace
   string mnt_namespace = 20;
-
   // Network namespace
   string net_namespace = 21;
-
   // PID namespace
   string pid_namespace = 22;
-
   // User namespace
   string user_namespace = 23;
-
   // UTS namespace
   string uts_namespace = 24;
 }

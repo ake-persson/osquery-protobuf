@@ -1,39 +1,27 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Main memory information in bytes.
 message MemoryInfo {
-
   // Total amount of physical RAM
   int64 memory_total = 1;
-
   // The amount of physical RAM
   int64 memory_free = 2;
-
   // The amount of physical RAM
   int64 buffers = 3;
-
   // The amount of physical RAM
   int64 cached = 4;
-
   // The amount of swap
   int64 swap_cached = 5;
-
   // The total amount of buffer or page cache memory
   int64 active = 6;
-
   // The total amount of buffer or page cache memory
   int64 inactive = 7;
-
   // The total amount of swap available
   int64 swap_total = 8;
-
   // The total amount of swap free
   int64 swap_free = 9;
 }

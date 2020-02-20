@@ -1,24 +1,17 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Docker images information.
 message DockerImage {
-
   // Image ID
   string id = 1;
-
   // Time of creation as UNIX time
   int64 created = 2;
-
   // Size of image in bytes
   int64 size_bytes = 3;
-
   // Comma-separated list of repository tags
   string tags = 4;
 }

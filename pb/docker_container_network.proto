@@ -1,45 +1,31 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Docker container networks.
 message DockerContainerNetwork {
-
   // Container ID
   string id = 1;
-
   // Network name
   string name = 2;
-
   // Network ID
   string network_id = 3;
-
   // Endpoint ID
   string endpoint_id = 4;
-
   // Gateway
   string gateway = 5;
-
   // IP address
   string ip_address = 6;
-
   // IP subnet prefix length
   int32 ip_prefix_len = 7;
-
   // IPv6 gateway
   string ipv6_gateway = 8;
-
   // IPv6 address
   string ipv6_address = 9;
-
   // IPv6 subnet prefix length
   int32 ipv6_prefix_len = 10;
-
   // MAC address
   string mac_address = 11;
 }

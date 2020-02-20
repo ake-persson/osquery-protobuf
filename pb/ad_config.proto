@@ -1,24 +1,17 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // OS X Active Directory configuration.
 message AdConfig {
-
   // The OS X-specific configuration name
   string name = 1;
-
   // Active Directory trust domain
   string domain = 2;
-
   // Canonical name of option
   string option = 3;
-
   // Variable typed option value
   string value = 4;
 }

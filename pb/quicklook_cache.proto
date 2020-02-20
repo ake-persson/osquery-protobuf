@@ -1,45 +1,31 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // Files and thumbnails within OS X's Quicklook Cache.
 message QuicklookCache {
-
   // Path of file
   string path = 1;
-
   // Quicklook file rowid key
   int32 rowid = 2;
-
   // Quicklook file fs_id key
   string fs_id = 3;
-
   // Parsed volume ID from fs_id
   int32 volume_id = 4;
-
   // Parsed file ID (inode) from fs_id
   int32 inode = 5;
-
   // Parsed version date field
   int32 mtime = 6;
-
   // Parsed version size field
   int64 size = 7;
-
   // Parsed version 'gen' field
   string label = 8;
-
   // Number of cache hits on thumbnail
   string hit_count = 9;
-
   // Thumbnail icon mode
   int64 icon_mode = 10;
-
   // Path to cache data
   string cache_path = 11;
 }

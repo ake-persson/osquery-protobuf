@@ -1,66 +1,45 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // PCI devices active on the host system.
 message PciDevice {
-
   // PCI Device used slot
   string pci_slot = 1;
-
   // PCI Device class
   string pci_class = 2;
-
   // PCI Device used driver
   string driver = 3;
-
   // PCI Device vendor
   string vendor = 4;
-
   // Hex encoded PCI Device vendor identifier
   string vendor_id = 5;
-
   // PCI Device model
   string model = 6;
-
   // Hex encoded PCI Device model identifier
   string model_id = 7;
-
   // PCI Device subsystem
   string subsystem = 8;
-
   // 1 If PCI device is express else 0
   int32 express = 9;
-
   // 1 If PCI device is thunderbolt else 0
   int32 thunderbolt = 10;
-
   // 1 If PCI device is removable else 0
   int32 removable = 11;
-
   // PCI Device class ID in hex format
   string pci_class_id = 12;
-
   // PCI Device  subclass in hex format
   string pci_subclass_id = 13;
-
   // PCI Device subclass
   string pci_subclass = 14;
-
   // Vendor ID of PCI device subsystem
   string subsystem_vendor_id = 15;
-
   // Vendor of PCI device subsystem
   string subsystem_vendor = 16;
-
   // Model ID of PCI device subsystem
   string subsystem_model_id = 17;
-
   // Device description of PCI device subsystem
   string subsystem_model = 18;
 }

@@ -1,36 +1,25 @@
-
 syntax = "proto3";
 
 package schemas;
 
 option go_package = "github.com/mickep76/osquery-protobuf/pkg;schemas";
 
-
-
 // List of currently installed packages.
 message PortagePackage {
-
   // Package name
   string package = 1;
-
   // The version which are affected by the use flags
   string version = 2;
-
   // The slot used by package
   string slot = 3;
-
   // Unix time when package was built
   int64 build_time = 4;
-
   // From which repository the ebuild was used
   string repository = 5;
-
   // The eapi for the ebuild
   int64 eapi = 6;
-
   // The size of the package
   int64 size = 7;
-
   // If package is in the world file
   int32 world = 8;
 }
